@@ -2,41 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>hobby</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e0f7fa;}
-        form {
-            background-color: #fff;
-            max-width: 400px;
-            margin: auto;}
-        h2 {
-            background-color:#ff5722;
-            text-align: center;
-            color: white;
-        }
-    </style>
+    <title>Form đăng ký</title>
 </head>
 <body>
-<form>
-    <h2>SỞ THÍCH CỦA BẠN</h2>
-    <p style="color:blue">Họ và tên
-        <input type="text" name="yourname" ><br> <br>
-        Email
-        <input type="text" name="email"><br> <br>
-        Sở thích
-    <p style="color:#ff5722">
-        <input type="checkbox" name="hobby" value="The thao"> Thể thao
-        <input type="checkbox" name="hobby" value="Am nhac"> Âm nhạc
-        <input type="checkbox" name="hobby" value="Doc sach"> Đọc sách <br>
-        <input type="checkbox" name="hobby" value="Luot web\"> Lướt web
-        <input type="checkbox" name="hobby" value="Choi game"> Chơi game
-        <input type="checkbox" name="hobby" value="Dien Anh"> Điện ảnh <br>
-        <input type="checkbox" name="hobby" value="Du lich"> Du lịch <br>
-
-        <button type="submit" name="Submit Form" >Gửi thông tin </button>
-        <button type="reset" name="Resest Form" >Nhập lại</button>
+<form method="get" action="formdangky.html">
+    <b>
+        <p>Họ và tên:</p>
+        <input type="text" name="hovaten" size="15"/>
+        <p>Email:</p>
+        <input type="text" name="email" size="15"/>
+        <p>Số điện thoại</p>
+        <input type="text" name="sodienthoai" size="15">
+        <p>Giới tính</p>
+        <input type="radio" name="rd"/>Nam
+        <input type="radio" name="rd"/>Nữ
+        <p><input type="button" name="btSubmid" value="Đăng Ký"/></p>
+    </b>
 </form>
 </body>
 </html>
