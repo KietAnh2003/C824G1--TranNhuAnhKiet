@@ -23,21 +23,27 @@
     </style>
 </head>
 <body>
-
 <form>
     <h2>SỞ THÍCH CỦA BẠN</h2>
     <p style="color:blue">Họ và tên
         <input type="text" name="yourname" > <br><br>
         Email
         <input type="text" id="email" name="email" required> <br> <br>
-        Sở thích:
-        <input type="checkbox" name="hobby" value="The thao"> Thể thao
-        <input type="checkbox" name="hobby" value="Am nhac"> Âm nhạc
-        <input type="checkbox" name="hobby" value="Doc sach"> Đọc sách<br>
-        <input type="checkbox" name="hobby" value="Luot web"> Lướt web
-        <input type="checkbox" name="hobby" value="Choi game"> Chơi game
-        <input type="checkbox" name="hobby" value="Dien Anh"> Điện ảnh<br>
-        <input type="checkbox" name="hobby" value="Du lich"> Du lịch<br>
+
+        <tr>
+            <td rowspan="4" ><span class="thongtin">Sở thích</span></td>
+            <td> <input type="checkbox" name="hobby" value="The thao"> Thể thao</td>
+            <td> <input type="checkbox" name="hobby" value="Am nhac"> Âm nhạc</td>
+            <td> <input type="checkbox" name="hobby" value="Doc sach"> Đọc sách</td>
+        </tr>
+        <tr>
+            <td> <input type="checkbox" name="hobby" value="Luot web"> Lướt web</td>
+            <td> <input type="checkbox" name="hobby" value="Choi game"> Chơi game</td>
+            <td> <input type="checkbox" name="hobby" value="Dien Anh"> Điện ảnh</td>
+        </tr>
+        <tr>
+            <td>  <input type="checkbox" name="hobby" value="Du lich"> Du lịch</td>
+
         <button type="submit">Gửi thông tin</button>
         <button type="reset">Nhập lại</button>
 </form>
