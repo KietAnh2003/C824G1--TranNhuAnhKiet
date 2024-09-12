@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi tiền tệ</title>
+</head>
+<body>
+<form>
+  <table>
+    <tr>
+      <th> <label for="Amount"> Amount </label> </th>
+      <th> From Currency </th>
+      <th> To Currency </th>
+      <th></th>
+    </tr>
+    <tr>
+      <td> <input type ="text" placeholder="Nhập số tiền" id="Amount"> </td>
+      <td>
+        <label for="from"></label><select name="Fromto" id="from">
+            <option value ="USD">USD</option>
+            <option value ="VND">VND</option>
+            <option value ="CND">CND</option>
+            </select>
+      </td>
+      <td>
+        <label for="to"></label><select name="To" id="to">
+          <option value ="VND">VND</option>
+          <option value ="USD">USD</option>
+          <option value ="CND">CND</option>
+        </select>
+        <td> <button type="button" onclick="doitien()"> Convert </button> </td>
+  </table>
+  <p id ="Ketqua"> </p>
+</form>
+
+<script src = "Tinhtien.js"> </script>
+</body>
+</html>
+
