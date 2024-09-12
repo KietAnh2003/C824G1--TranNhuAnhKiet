@@ -21,6 +21,7 @@ function div() {
     let numBer2 = document.getElementById("numBer2").value;
     if (numBer2 != 0) {
         let ketQua = Number(numBer1) / Number(numBer2);
+        document.getElementById("ketQua").innerHTML = ketQua
     } else {
         document.getElementById("ketQua").innerHTML = "Lỗi không chia được cho 0!";
     }
