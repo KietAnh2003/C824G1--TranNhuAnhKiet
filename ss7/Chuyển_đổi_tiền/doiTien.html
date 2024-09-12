@@ -16,24 +16,23 @@
     <tr>
       <td> <input type ="text" placeholder="Nhập số tiền" id="Amount"> </td>
       <td>
-        <label for="from"></label><select name="Fromto" id="from">
+        <label for="fromCurrency"></label><select name="fromCurrency" id="fromCurrency">
             <option value ="USD">USD</option>
             <option value ="VND">VND</option>
             <option value ="CND">CND</option>
             </select>
       </td>
       <td>
-        <label for="to"></label><select name="To" id="to">
+        <label for="toCurrency"></label><select name="toCurrency" id="toCurrency">
           <option value ="VND">VND</option>
           <option value ="USD">USD</option>
           <option value ="CND">CND</option>
         </select>
-        <td> <button type="button" onclick="doitien()"> Convert </button> </td>
+        <td> <button type="button" onclick="doiTien()"> Convert </button> </td>
   </table>
-  <p id ="Ketqua"> </p>
+  <p id ="ketQua"> </p>
 </form>
-
-<script src = "Tinhtien.js"> </script>
+<script src = "doiTien.js"> </script>
 </body>
 </html>
 
