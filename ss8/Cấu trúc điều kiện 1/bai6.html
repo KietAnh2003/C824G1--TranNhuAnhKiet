@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng</title>
+</head>
+<body>
+
+<h1>Tính hoa hồng theo doanh số</h1>
+<label for="doanhSo">Nhập doanh số bán:</label>
+<input type="number" id="doanhSo" placeholder="nhập doanh số VND"> <br>
+<button onclick="tinhHoaHong()">Tính hoa hồng</button>
+<p id="hoaHong"></p>
+
+<script>
+  function tinhHoaHong() {
+    let doanhSo = parseInt(document.getElementById("doanhSo").value);
+    let hoaHong;
+    if (doanhSo > 0) {
+      hoaHong = doanhSo * 10 / 100;
+    } else {
+      hoaHong = "Doanh số không có nên không có hoa hồng!"
+    }
+    document.getElementById("hoaHong").innerHTML = "Doanh số nhận được:     " + hoaHong + "VND";
+  }
+</script>
+</body>
+</html>
