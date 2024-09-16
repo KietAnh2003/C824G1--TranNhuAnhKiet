@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhập a để tính phương trình bậc 2 ax^2 + bx + c = 0"));
+    let b = parseFloat(prompt("Nhập b để tính phương trình bậc 2 ax^2 + bx + c = 0"));
+    let c = parseFloat(prompt("Nhập c để tính phương trình bậc 2 ax^2 + bx + c = 0"));
+    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        alert("Hãy nhập số cho a, b và c.");
+    } else {
+        let denta = Math.pow(b,2) - 4 * a * c;
+        let x = -b / (2 * a);
+        let x1 = (-b + Math.sqrt(denta)) / (2 * a);
+        let x2 = (-b - Math.sqrt(denta)) / (2 * a);
+        if (denta < 0) {
+            alert("Phương trình bậc 2 vô nghiệm");
+        } else if (denta === 0) {
+            alert("Phương trình bậc 2 có nghiệm kép x = " + x);
+        } else {
+            alert("Phương trình bậc 2 có 2 nghiệm là: x1 = " + x1 + " và x2 = " + x2);
+        }
+    }
+</script>
+</body>
+</html>
