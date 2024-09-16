@@ -16,10 +16,10 @@
     let tuoi = parseInt(document.getElementById("tuoi").value);
     let ketQua;
     if (tuoi < 15) {
-      ketQua = "Không đủ điều kiện vào lớp 10";
-    } else {
-      ketQua = "Đủ điều kiện vào lớp 10";
-    }
+      ketQua = "Không đủ điều kiện vào lớp 10 vì nhỏ";
+    } else if ( tuoi > 15 ){
+      ketQua = "Không điều kiện vào lớp 10 vì lớn ";
+    } else { ketQua = " Đủ điều kiện vào lớp 10"}
     document.getElementById("ketQua").innerHTML = ketQua;
   }
 </script>
