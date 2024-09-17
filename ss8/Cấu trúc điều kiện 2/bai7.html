@@ -13,14 +13,17 @@
         alert("Hãy nhập số cho a, b và c.");
     } else {
         let denta = Math.pow(b,2) - 4 * a * c;
-        let x = -b / (2 * a);
-        let x1 = (-b + Math.sqrt(denta)) / (2 * a);
-        let x2 = (-b - Math.sqrt(denta)) / (2 * a);
+        let x;
+        let x1;
+        let x2;
         if (denta < 0) {
             alert("Phương trình bậc 2 vô nghiệm");
         } else if (denta === 0) {
+            x = -b / (2 * a);
             alert("Phương trình bậc 2 có nghiệm kép x = " + x);
         } else {
+            x1 = (-b + Math.sqrt(denta)) / (2 * a);
+            x2 = (-b - Math.sqrt(denta)) / (2 * a);
             alert("Phương trình bậc 2 có 2 nghiệm là: x1 = " + x1 + " và x2 = " + x2);
         }
     }

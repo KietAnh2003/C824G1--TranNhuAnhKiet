@@ -9,7 +9,7 @@
   let canhA = parseFloat(prompt("Nhập chiều dài cạnh a: "));
   let dienTich = parseFloat(canhA * canhA);
 
-  if (canhA>=0) {
+  if (isNaN(canhA) && canhA>=0) {
     alert( " diện tích hình vuông là : " + dienTich )
   } else { alert( " Hãy nhập chiều dài lớn hơn 0") };
 

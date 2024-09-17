@@ -10,7 +10,7 @@
     let canhB = parseFloat(prompt("Nhập đường cao b: "));
     let dienTich = parseFloat((canhA * canhB)/2);
 
-    if (canhA>0 && canhB>0) {
+    if (isNaN(canhA) && isNaN(canhB) && canhA>0 && canhB>0) {
         alert( " diện tích tam giác vuông là:" + dienTich );
     } else { alert( " Hãy nhập cạnh và đường cao lớn hơn 0")}
 
