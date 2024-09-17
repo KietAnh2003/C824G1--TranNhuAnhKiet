@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Nhiệt Độ</title>
 </head>
 <body>
-$END$
+<h1>Kiểm Tra Nhiệt Độ Hiện Tại</h1>
+<button id="nutKiemTra">Kiểm Tra Nhiệt Độ</button>
+
+<div id="ketQua"></div>
+
+<script>
+    document.getElementById('nutKiemTra').addEventListener('click', function() {
+        let nhietDo = prompt('Nhập nhiệt độ hiện tại:');
+        nhietDo = parseFloat(nhietDo); // Chuyển đổi chuỗi thành số
+
+        let thongBao = '';
+
+        if (nhietDo > 100) {
+            thongBao = 'Nhiệt độ quá cao! Vui lòng giảm nhiệt độ.';
+        } else if (nhietDo < 20) {
+            thongBao = 'Nhiệt độ quá thấp! Vui lòng tăng nhiệt độ.';
+        } else {
+            thongBao = 'Nhiệt độ hiện tại là hợp lý.';
+        }
+
+        document.getElementById('ketQua').innerText = thongBao;
+    });
+</script>
 </body>
 </html>

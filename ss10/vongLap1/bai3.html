@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonacci</title>
 </head>
 <body>
-$END$
+<h1>20 Số Trong Dãy Fibonacci Đầu Tiên</h1>
+<button id="nutHienThi">Hiển Thị Dãy Fibonacci</button>
+
+<div id="ketQua"></div>
+
+<script>
+    document.getElementById('nutHienThi').addEventListener('click', function() {
+        const soLuong = 20;
+        let fib = [0, 1]; // Khởi tạo dãy Fibonacci với 0 và 1
+
+        for (let i = 2; i < soLuong; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2]; // Tính số tiếp theo
+        }
+        document.getElementById('ketQua').innerText = fib.join(', ');
+    });
+</script>
 </body>
 </html>

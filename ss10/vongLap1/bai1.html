@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Đếm Từ 1 Đến 100</title>1.0">
+
 </head>
 <body>
-$END$
+<h1>Đếm Từ 1 Đến 100</h1>
+<button id="nutDem">Bắt Đầu Đếm</button>
+
+<div id="ketQua"></div>
+
+<script>
+    document.getElementById('nutDem').addEventListener('click', function() {
+        let ketQua = '';
+        for (let i = 1; i <= 100; i++) {
+            ketQua += i + ' ';
+            if (i === 99) {
+                alert('Đã hoàn thành!');
+            }
+        }
+        document.getElementById('ketQua').innerText = ketQua;
+    });
+</script>
 </body>
 </html>
