@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonacci</title>
+</head>
+<body>
+<h1>20 số Fibonacci đầu tiên</h1>
+<button onclick="taoFibo()" id="hienThi">Hiển thị dãy số Fibonacci</button>
+<div id="dayFibo"></div>
+</head>
+<script>
+    function taoFibo() {
+        let F=0 , F0=0 , F1=0
+        let fibonacci = " ";
+        for (let i=0;i<20;i++){
+            if(i==0){
+                F=0
+                F1=1
+                fibonacci += F+ " , "
+            }else{
+                F=F0+F1
+                F0=F1
+                F1=F
+                fibonacci += F+ " , "
+            }
+        }
+        document.getElementById("dayFibo").innerHTML= fibonacci }
+</script>
+</body>
+</html>
+<!-- fibo = 0 + 1 = 2        -->
+<!-- fibo1 = fibo + 1 = 3          -->
+<!-- fibo2 = fibo1 + fibo  = 5      -->
+<!-- fibo3 = fibo1 + fibo2 = 8      -->
+<!-- fibo4 = fibo2 + fibo3 = 13     -->
+<!-- fibo[i] = fibo[i-2] + fibo[i-1]   -->

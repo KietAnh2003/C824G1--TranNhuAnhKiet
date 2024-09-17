@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FizzBuzz</title>
+</head>
+<body>
+<h1>In ra các số từ 1 đến 100 cùng Fizz Buzz</h1>
+<button onclick="taoDaySo()" id="hienThi">Hiển thị </button>
+<div id="daySoTuNhien"></div>
+<script>
+  function taoDaySo() {
+    for (let i = 1; i <= 100; i++) {
+      if (i % 3 == 0) {
+        document.getElementById("daySoTuNhien").innerHTML = 'Fizz' + " , ";
+      } else if (i % 5 == 0) {
+          document.getElementById("daySoTuNhien").innerHTML = 'Buzz' + " , ";
+        } else if (i % 3 == 0 && i % 5 == 0) {
+          document.getElementById("daySoTuNhien").innerHTML = 'FizzBuzz' + " , ";
+        } else document.getElementById("daySoTuNhien").innerHTML = i + " , "
+      }
+    }
+</script>
+</body>
+</html>

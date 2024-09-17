@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Taobang</title>
+</head>
+<body>
+  <table border="1">
+    <tr>
+        <th>  mặt </th>
+        <th> Tên </th>
+        <th> Tuổi </th>
+    </tr>
+    <tr>
+      <th rowspan="3" >   1  </th>
+      <td> Kiệt</td>
+      <td> 23</td>
+    </tr>
+    <tr>
+      <th>  2 </th>
+      <td> Anh</td>
+      <td> 22</td>
+    </tr>
+    <tr>
+      <th>  2 </th>
+      <td> Anh</td>
+      <td> 22</td>
+    </tr>
+     <!-- <tr> <td colspan="2"> tổng tuổi 190 </td> </tr>COLSPAN độ rộng bằng 2 ô , ố kế bên + nó -->
+  </table>
+<form action="https://www.google.com.vn/" method="get">
+    <fieldset>
+    <legend> Person info</legend>
+     First name:<br>
+    <input type="text" name="firstname" value="Anh"> <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Kiet"> <br>
+    <input type="submit" value="Submit"><!-- ACtion nơi gửi dữ liệu đến Sever này hoặc kh-->
+    <br>  <input type="text" name="q"/>        <!-- Method cách gửi dữ liệu GET POST-->
+      <input type="submit" value="Tìm kiếm"/>
+    </fieldset>
+    Account
+    <input name="account" type="text"> <br>
+    Password
+    <input name="psw" type="password"> <br>
+</form>
+  <!---input Checkbox chọn nhiều lựa chọn-->
+<form action="/action_page.php">
+        Sở thích:<br/>
+        <label><input name="hobby" value="travel" type="checkbox"/> Du lịch</label> <br/>
+        <label><input name="hobby" value="sport" type="checkbox"/> Thể thao</label> <br/>
+        <label><input name="hobby" value="cooking" type="checkbox"/> Nấu ăn</label> <br/>
+</form>
+  <!---input Radio chọn 1 lựa chọn-->
+<form action="/action_page.php">
+        Sở thích:<br/>
+        <label><input name="hobby" value="travel" type="radio" checked/> Du lịch</label> <br/>
+        <label><input name="hobby" value="sport" type="radio"/> Thể thao</label> <br/>
+        <label><input name="hobby" value="cooking" type="radio"/> Nấu ăn</label> <br/>
+</form>
+  <!---input Reset trả về giá trị mặc định -->
+<form action="/action_page.php">
+      Account: <input name="account" value="admin" type="text"/><br/>
+      Sở thích:<br/>
+      <label><input name="hobby" value="travel" type="radio" checked/> Du lịch</label> <br/>
+      <label><input name="hobby" value="sport" type="radio"/> Thể thao</label> <br/>
+      <label><input name="hobby" value="cooking" type="radio"/> Nấu ăn</label> <br/>
+      <input type="reset" value="Reset"/>
+</form>
+  <!-- Input SUBMIT form POST GET hiện 1 nút đẩy dữ liệu lên Sver khi bấm vào-->
+<form method="POST">
+      Account: <input name="account" value="admin" type="text"/><br/>
+      Sở thích:<br/>
+      <label><input name="hobby" value="travel" type="radio" checked/> Du lịch</label> <br/>
+      <label><input name="hobby" value="sport" type="radio"/> Thể thao</label> <br/>
+      <label><input name="hobby" value="cooking" type="radio"/> Nấu ăn</label> <br/>
+      <input type="submit" value="Send data"/>
+</form>
+  <!-- Input Hidden chứa giá trị form nhưng kh hiển thị trên giao diện ng dùng -->
+<form method="POST">
+      <input name="secret" value="abcg124faasfjh149dfd" type="hidden"/>
+      Account: <input name="account" value="admin" type="text"/><br/>
+      Sở thích:<br/>
+      <label><input name="hobby" value="travel" type="radio" checked/> Du lịch</label> <br/>
+      <label><input name="hobby" value="sport" type="radio"/> Thể thao</label> <br/>
+      <label><input name="hobby" value="cooking" type="radio"/> Nấu ăn</label> <br/>
+      <input type="submit" value="Send data"/>
+</form>
+    <!--thẻ Button tạo nút đưa tất cả các nội dung vào, nó KHÁC Input Button là chỉ có Text-->
+<form method="POST">
+      <button type="button">
+          <img src="http://codegym.vn/wp-content/uploads/2017/03/CodeGym-3-02-copy.jpg" width="200px"/>
+      </button>
+</form>
+ <!--thẻ Textarea-->
+<form method="POST">
+      <textarea cols="50" rows="4"> Dùng để nhập 1 dòng chữ dài dài dài dài dài dài NHIỀU DÒNG </textarea>
+</form>
+</body>
+</html>
