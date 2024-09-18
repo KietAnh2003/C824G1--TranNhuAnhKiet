@@ -6,25 +6,25 @@
 </head>
 <body>
 <h1>Tổng 30 số tự nhiên đầu tiên chia hết cho 7</h1>
-<button onclick="taoDaySo()" id="hienThi">Hiển thị dãy số tự nhiên chia hết cho 7</button>
-<div id="daySo"></div>
-<div id="tong"></div>
+<button onclick="numberSeries()" id="display">Hiển thị dãy số tự nhiên chia hết cho 7</button>
+<div id="numberSeries"></div>
+<div id="sum"></div>
 <script>
-  function taoDaySo() {
-    let tong = 0;
+  function numberSeries() {
+    let sum = 0;
     let count = 0;
-    let daySoTuNhien = " " ;
+    let numberNatural = " " ;
     for (let i=0; ; i++){
       if(i%7===0){
-        daySoTuNhien += i + " , ";
-        tong += i;
+        numberNatural += i + " , ";
+        sum += i;
         count ++;
-        if(count===30)
+        if(count === 30)
           break;
       }
     }
-    document.getElementById("daySo").innerHTML= daySoTuNhien ;
-    document.getElementById("tong").innerHTML= "Tổng dãy số trên là: " + tong;
+    document.getElementById("numberSeries").innerHTML= numberNatural ;
+    document.getElementById("sum").innerHTML= "Tổng dãy số trên là: " + sum;
   }
 </script>
 </body>
