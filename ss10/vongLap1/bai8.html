@@ -21,7 +21,7 @@
              numberGuess = parseInt(prompt("Nhập số bạn đoán từ 0 đến số đó trừ nó :"));
             if (isNaN(numberGuess)) {
                 alert("Vui lòng nhập một số hợp lệ.");
-                continue;                            // bỏ qua lệnh if phía dưới để quay lại vòng lặp while nếu Num không phải số
+                continue;                                          // nếu NG là chữ.bỏ qua lệnh if phía dưới để quay lại vòng lặp while nếu Num không phải số
             }
             if (numberGuess === numberRandom) {
                 alert("Chúc mừng! Bạn đã đoán đúng số đó là: " + numberRandom);
@@ -31,7 +31,7 @@
             } else {
                 alert("Số bạn đoán sai! Hãy thử nhập số bé hơn");
             }
-            count++;                                 // đến khi count = 3 , while sẽ kết thúc và đến lệnh dưới
+            count++;                                                      // đến khi count = 3 , while sẽ kết thúc và đến lệnh dưới
         }
         if (numberGuess !== numberRandom) {
             alert("Bạn đã hết số lần đoán. Số đúng là: " + numberRandom);
