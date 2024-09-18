@@ -6,39 +6,34 @@
 </head>
 <body>
 <h1>Hiển thị 20 số nguyên tố đầu tiên</h1>
-<button onclick="hienThiSoNguyenTo()">Hiển thị số nguyên tố</button>
-<div id="soNguyenTo"></div>
-
+<button onclick="primeNumber()">Hiển thị số nguyên tố</button>
+<div id="isPrime"></div>
 <script>
-    function hienThiSoNguyenTo() {
-        let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần in ra:"));  // Bước 1
-        let count = 0;  // Bước 2
-        let N = 2;  // Bước 3
-        let ketQua = "";
 
-        while (count < numbers) {  // Bước 4
-            // Kiểm tra nếu N là số nguyên tố
-            let isPrime = true;  // Biến cờ mặc định là true
+    function primeNumber() {
+        let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần in ra:"));
+        let count = 0;
+        let N = 2;
+        let result = " ";
+        let isPrime = true;
+        while (count < numbers) {
             if (N < 2) {
-                isPrime = false;  // Số nhỏ hơn 2 không phải số nguyên tố
+                isPrime = false;
             } else {
                 for (let i = 2; i <= Math.sqrt(N); i++) {
                     if (N % i === 0) {
-                        isPrime = false;  // Nếu tìm thấy ước số, thì không phải nguyên tố
-                        break;  // Thoát vòng lặp sớm
+                        isPrime = false;
+                        break;
                     }
                 }
             }
-            // Nếu là số nguyên tố, in ra và tăng biến đếm count
             if (isPrime) {
-                ketQua += N + " ";
+                result += N + " ";
                 count++;
             }
-            // Tăng N để kiểm tra số tiếp theo
             N++;
         }
-        // Hiển thị kết quả ra màn hình
-        document.getElementById("soNguyenTo").innerHTML = ketQua;
+        document.getElementById("soNguyenTo").innerHTML = result;
     }
 </script>
 </body>

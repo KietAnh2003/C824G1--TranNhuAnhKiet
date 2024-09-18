@@ -7,13 +7,15 @@
 <body>
 
 <h1>Tổng 20 số Fibonacci đầu tiên</h1>
-<button onclick="taoFibo()" id="hienThi">Hiển thị 20 số Fibonacci và Tổng</button>
-<div id="dayFibo"></div>
-<div id="tongFibo"></div>
+<button onclick="taoFibonacci()" id="hienThi">Hiển thị 20 số Fibonacci và Tổng</button>
+<div id="dayFibonacci"></div>
+<div id="tongFibonacci"></div>
 
 <script>
-    function taoFibo() {
-        let F,  F0 = 0, F1 = 1;
+    function taoFibonacci() {
+        let F ;
+        let F0 = 0;
+        let F1 = 1;
         let fibonacci = F0 + ", " + F1;
         let tongFibonacci = 0;
 
@@ -24,8 +26,8 @@
             fibonacci +=  ", " + F;
             tongFibonacci += F ;
         }
-        document.getElementById("dayFibo").innerHTML= fibonacci;
-        document.getElementById("tongFibo").innerHTML=  " Tổng các số trên là : " + tongFibonacci;
+        document.getElementById("dayFibonacci").innerHTML= fibonacci;
+        document.getElementById("tongFibonacci").innerHTML=  " Tổng các số trên là : " + tongFibonacci;
     }
 </script>
 </body>
