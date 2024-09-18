@@ -12,16 +12,16 @@
 
 <script>
     function taoFibonacci() {
-        let F;
-        let F0 = 0;
-        let F1 = 1;
-        let fibonacci = F0 + ", " + F1;
+        let Fibo ;
+        let Fibo0 = 0;
+        let Fibo1 = 1;
+        let fibonacci = Fibo0 + ", " + Fibo1;
 
         for (let i = 2; i < 20; i++){
-                F = F0 + F1;
-                F0 = F1;
-                F1 = F;
-                fibonacci +=  ", " + F;
+                Fibo = Fibo0 + Fibo1;
+                Fibo0 = Fibo1;
+                Fibo1 = Fibo;
+                fibonacci +=  ", " + Fibo;
             }
         document.getElementById("dayFibonacci").innerHTML= fibonacci;
 }
