@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Từ điển</title>
+</head>
+<body>
+<label for="string">Nhập từ: </label>
+<input type="text" id="string" placeholder="Nhập từ tiếng Anh">
+<button type="button" onclick="translate()" id="translate">Dịch</button>
+<p id="result"></p>
+
+<script>
+  function translate() {
+    let arrEnglish = ["white", "blue", "green", "red", "yellow", "black"];
+    let arrVietnam = ["màu trắng", "màu xanh dương", "màu xanh lục", "màu đỏ", "màu vàng", "màu đen"];
+    index
+    if (index !== -1) {
+      document.getElementById("result").innerText = arrVietnam[index];
+    } else {
+      document.getElementById("result").innerText = "Không tìm thấy từ";
+    }
+  }
+</script>
+</body>
+</html>

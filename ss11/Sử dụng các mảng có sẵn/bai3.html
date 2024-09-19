@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chữ thường thành chữ hoa</title>
+</head>
+<body>
+<label for="string">Nhập chuỗi ký tự: </label>
+<input type="text" id="string" placeholder="Nhập vào chuỗi">
+<button onclick="toUpperCase()">Chuyển đổi</button>
+<p>Kết quả: <span id="result"></span></p>
+
+<script>
+    function toUpperCase() {
+        let input = document.getElementById("string").value;
+        let result = input.toUpperCase();
+        document.getElementById("result").innerText = result;
+    }
+</script>
+</body>
+</html>

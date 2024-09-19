@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chèn dấu vào số</title>
+</head>
+<body>
+<h2> Chèn ký tự - vào giữa 2 số chẵn </h2>
+<label for="inputNumber">Nhập số: </label>
+<input type="text" id="inputNumber" placeholder="Nhập vào số">
+<button onclick="insert()">Chèn dấu</button>
+<p>Kết quả: <span id="result"></span></p>
+
+<script>
+  function insert() {
+    let number = document.getElementById("inputNumber").value;
+    let result = "";
+    for (let i = 0; i < number.length; i++) {
+      let char1 = number[i];
+      let char2 = number[i + 1];
+      result += char1;
+      if (char1 % 2 === 0 && char2 && char2 % 2 === 0) {
+        result += " - ";
+      }
+    }
+    document.getElementById("result").innerText = result;
+  }
+</script>
+</body>
+</html>
