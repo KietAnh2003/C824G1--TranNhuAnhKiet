@@ -9,35 +9,40 @@
    let i;
    let j;
    let number =  parseInt(prompt('Nhap gia tri N'));
+
    for(let i=0; i < number; i++) {
      for(let j = 0; j <= i; j++) {
-       document.writeln(" * ")
+       document.write("*")
      }
-     document.writeln("<br>")
+     document.write("<br>")
    } document.write("<br>")
 
    for( let i = number; i > 0; i--) {
      for(let j = 0; j< i; j++) {
-         document.writeln(" * ")
+         document.write("*")
      }
-     document.writeln("<br>")
+     document.write("<br>")
    } document.write("<br>")
 
    document.write("<div style='width: 70px; text-align:right'>");
-   for ( i = 0; i < number; i++) {
-     for (j = 0; j <= i; j++) {
-       document.write(" * ");
+   for (let i = 0; i < number; i++) {
+     for (let j = 0; j < number - i - 1; j++) {
+       document.write("&#8192;");
+     }for (let j = 0; j <= i; j++) {
+       document.write("*");
      }
      document.write("<br>");
-   } document.write("<br>")
+   }document.write("<br>");
 
    document.write("<div style='width: 70px; text-align:right'>");
-   for( let i = number; i > 0; i--) {
-     for(let j = 0; j< i; j++) {
-       document.writeln(" * ")
+   for (let i = number; i > 0; i--) {
+     for (let j = 0; j < number - i; j++) {
+       document.write("&#8192;");
      }
-     document.writeln("<br>")
-   } document.write("<br>")
+     for (let j = 0; j < i; j++) {
+       document.write("*");
+     }document.write("<br>");
+   }
 </script>
 </body>
 </html>
