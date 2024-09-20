@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<h1> Tìm số nguyên trong mảng đã có </h1>
+<label for="number"></label><input type="number" id="number" placeholder="Số nguyên cần tìm">
+<button onclick="findInteger()"> Tìm </button>
+<div id="result"> </div>
+
+<script>
+    let array;
+    let find;
+    let integer;
+    function findInteger() {
+        array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        find = false;
+        integer = parseInt(document.getElementById("number").value);
+        for (let i = 0; i < array.length; i++) {
+            if (integer === array[i]) {
+                find = true;
+                break;
+            }
+        }
+        if (isNaN(integer)) {
+            document.getElementById("result").innerHTML = "Please enter the number ";
+        } else if (find) {
+            document.getElementById("result").innerHTML = "Number " + integer + "  is in the array";
+        } else {
+             document.getElementById("result").innerHTML = "Number " + integer + "  is not in the array";
+        }
+    }
+
+</script>
+</body>
+</html>

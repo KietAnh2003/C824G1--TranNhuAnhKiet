@@ -14,8 +14,8 @@
   function translate() {
     let arrEnglish = ["white", "blue", "green", "red", "yellow", "black"];
     let arrVietnam = ["màu trắng", "màu xanh dương", "màu xanh lục", "màu đỏ", "màu vàng", "màu đen"];
-    index
-    if (index !== -1) {
+    let word = document.getElementById("string").value;
+    if (word === arrEnglish[index]) {
       document.getElementById("result").innerText = arrVietnam[index];
     } else {
       document.getElementById("result").innerText = "Không tìm thấy từ";

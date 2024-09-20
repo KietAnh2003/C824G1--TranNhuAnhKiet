@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<h2> Đếm số nguyên âm trong một chuỗi</h2>
+<button onclick="findInteger()" id="findInteger"> Tìm số nguyên âm trong chuỗi</button>
+<div id="integer"></div>
+
+<script>
+        let text = "Tôi có 2 số là 5 và -15, cộng chúng lại sẽ ra -10";
+        function findInteger() {
+        let number = text.match(/-?\d+/g); // lọc số nguyên trong chuỗi text
+        if (number) {
+        number = number.map(Number);  // đổi các phần tử từ chuỗi thành số
+        let negativeNumber = number.filter(num => num < 0);  //lọc số âm
+        if (negativeNumber.length > 0) {
+        document.getElementById("integer").innerHTML = "Các số nguyên âm là: " + negativeNumber.join(", ");
+    } else {
+        document.getElementById("integer").innerHTML = "Không tìm thấy số nguyên âm nào.";
+    }
+    } else {
+        document.getElementById("integer").innerHTML = "Không tìm thấy số nguyên nào.";
+    }
+    }
+</script>
+</body>
+</html>

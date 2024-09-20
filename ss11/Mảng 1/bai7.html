@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 7</title>
+</head>
+<body>
+<h1> Tìm số nguyên trong mảng và xóa</h1>
+<label for="number"></label><input type="number" id="number" placeholder="Só nguyên cần tìm">
+<button onclick="findInteger()"> Tìm </button>
+<button onclick="deleteInteger()"> Xóa số và in lại mảng mới </button>
+<div id="result"> </div> <br>
+
+<script>
+      let array ;
+      let integer;
+      let find;
+   function findInteger()  {
+      array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      integer = parseInt(document.getElementById("number").value);
+      find = false;
+      for ( let i = 0; i < array.length; i++){
+         if (integer === array[i]){
+            find = true;
+            break;
+         }
+      }
+     if (isNaN(integer)) {
+       document.getElementById("result").innerHTML = "Hãy nhập số nguyên ";
+     } else if (find) {
+       document.getElementById("result").innerHTML = "Số " + integer + "  thuộc mảng";
+     } else {
+       document.getElementById("result").innerHTML = "Số " + integer + "  không thuộc mảng";
+     }
+   }
+   function deleteInteger() {
+       let index = array.indexOf(integer);
+       if (index !== -1 ){
+         array.splice(index,1);
+       } document.getElementById("result").innerHTML="Đã xóa số: " + integer + ". Mảng mới là: " + array;
+    }
+</script>
+</body>
+</html>

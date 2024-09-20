@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>So Nguyen</title>
+  <title>Bài 2</title>
 </head>
 <body>
 <button onclick="findMax()"> Hiển thị phần tử lớn nhất và vị trí trong mảng</button>
@@ -10,9 +10,10 @@
 
 <script>
   function findMax() {
-    let array = [1, 2, 3, 4, 11, 6, 7, 8, 9, 12];
+    let array = [12, 2, 3, 4, 11, 6, 7, 84, 9, 14];
     let max = array[0];
-    for (let i = 0; i < array.length; i++){
+    let maxIndex;
+    for (let i = 0 ; i < array.length; i++) {
       if (array[i] > max) {
         max = array[i];
         maxIndex = i;
