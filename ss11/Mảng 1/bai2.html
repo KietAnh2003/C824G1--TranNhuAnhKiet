@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bài 2</title>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
 </head>
 <body>
 <button onclick="findMax()"> Hiển thị phần tử lớn nhất và vị trí trong mảng</button>
-<p id="result"> </p>
+<p id="result"></p>
 
 <script>
-  function findMax() {
-    let array = [12, 2, 3, 4, 11, 6, 7, 84, 9, 14];
-    let max = array[0];
-    let maxIndex;
-    for (let i = 0 ; i < array.length; i++) {
-      if (array[i] > max) {
-        max = array[i];
-        maxIndex = i;
-      }
+    function findMax() {
+        let array = [12, 2, 3, 4, 11, 6, 7, 84, 9, 14];
+        let max = array[0];
+        let maxIndex;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                maxIndex = i;
+            }
+        }
+        document.getElementById("result").innerText = "Phần tử lớn nhất là: " + max + ", ở vị trí thứ: " + maxIndex;
     }
-    document.getElementById("result").innerText = "Phần tử lớn nhất là: " + max + ", ở vị trí thứ: " + maxIndex;
-  }
 </script>
 </body>
 </html>

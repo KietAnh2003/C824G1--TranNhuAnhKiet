@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 </title>
+</head>
+<body>
+<h2> Đảo ngược các ký tự trong mảng</h2>
+<button onclick="reverseArray()">Đảo ngược mảng</button>
+<div id="result"></div>
+
+<script>
+    function reverseArray() {
+        let array = ['a', 'h', 'a', 'h', '1', '0', '3', '2', 't', 'e', 'i', 'k'];
+        let reversedArray = array.reverse();
+        let string = reversedArray.join('');
+        document.getElementById("result").innerHTML = string;
+    }
+</script>
+</body>
+</html>

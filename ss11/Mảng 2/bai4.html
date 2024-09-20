@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4 </title>
+</head>
+<body>
+<h2> Đếm số từ trong chuỗi chữ</h2>
+<button onclick="countChar()">Đếm số từ</button>
+<div id="result"></div>
+
+<script>
+    function countChar() {
+        let array = 'Tôi hôm nay bị ốm nên tôi không thể đi học';
+        let string = array.split(" ")
+        document.getElementById("result").innerHTML = "Mảng có " + string.length + " từ";
+    }
+</script>
+</body>
+</html>

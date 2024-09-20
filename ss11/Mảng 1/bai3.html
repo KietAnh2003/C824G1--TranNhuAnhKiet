@@ -10,22 +10,22 @@
 <div id="result"></div>
 <div id="average"></div>
 <script>
-  function number() {
-    let array = [2, 3, 4, 6, 7, 8];
-    let max = array[0];
-    let sum = 0;
-    let average;
-    for (let i = 0; i < array.length; i++) {
-      if (max < array[i]) {
-        max = array[i];
-      }
-      sum = sum + array[i];
-      average = sum / array.length;
+    function number() {
+        let array = [2, 3, 4, 6, 7, 8];
+        let max = array[0];
+        let sum = 0;
+        let average;
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+            sum = sum + array[i];
+            average = sum / array.length;
+        }
+        document.getElementById("array").innerHTML = "Mảng có các giá trị: " + array;
+        document.getElementById("result").innerHTML = " Giá trị lớn nhất là: " + max;
+        document.getElementById("average").innerHTML = "Giá trị trung bình của các phần tử là: " + average;
     }
-    document.getElementById("array").innerHTML= "Mảng có các giá trị: " + array;
-    document.getElementById("result").innerHTML= " Giá trị lớn nhất là: " + max;
-    document.getElementById("average").innerHTML= "Giá trị trung bình của các phần tử là: " + average;
-  }
 </script>
 </body>
 </html>

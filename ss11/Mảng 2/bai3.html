@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3 </title>
+</head>
+<body>
+<h2> Đếm số ký tự trong mảng</h2>
+<button onclick="countChar()">Đếm số ký tự</button>
+<div id="result"></div>
+
+<script>
+    function countChar() {
+        let array = ['1', '2', '3', '4', 'k', 'i', 'e', 't'];
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] !== ' ') {
+                count++;
+            }
+        }
+        document.getElementById("result").innerHTML = "Mảng có " + count + " ký tự";
+    }
+</script>
+</body>
+</html>
