@@ -1,40 +1,29 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
 <body>
 <script>
-  let number = parseInt(prompt("Nhập số cần check "));
-  isPrime(number)
-  function isPrime(number){
-    let count = 0; // đếm số ước của số đang check
-    let isPrime = false;
-
-    if (number === 0) {
-      alert(number + " không là số nguyên tố")
-    } else {
-      for ( let i = 1; i <= number; i++) {
-        if(number % i === 0) {
-          count += 1;
+    function check_star(star) {
+        let index_star1 = 0;
+        let result = "";
+        for (let i = 0; i < star1.length; i++) {
+            if (star == star1[i]) {
+                index_star1 = i;
+                for (let j = 0; j < star2.length; j++) {
+                    if (index_star1 == j) {
+                        result = star2[j];
+                        return result;
+                    } else {
+                        result = "Không tìm thấy chòm sao"
+                        return result;
+                    }
+                }
+            } else {
+                result = "Không tìm thấy sao";
+                return result;
+            }
         }
-      }
 
-      if (count ===2 ) {
-        isPrime = true
-      }
-
-      if (isPrime) {
-        alert(number + " là số nguyên tố")
-      } else {
-        alert (number + " không là số nguyên tố")
-      }
     }
-  }
+
+    let star = prompt("Nhập vào ngôi sao: ")
+    document.write(check_star(star));
 </script>
 </body>
-</html>
