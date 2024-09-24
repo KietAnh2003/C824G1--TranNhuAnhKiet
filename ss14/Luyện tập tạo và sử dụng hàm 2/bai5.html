@@ -7,6 +7,34 @@
 <body>
 <script>
 
+    let number1 = +prompt("Nhập số nguyên thứ nhất: ");
+    let number2 = +prompt("Nhập số nguyên thứ hai: ");
+    let number3 = +prompt("Nhập số nguyên thứ ba: ");
+    while (isNaN(number1) || (isNaN(number2) || isNaN(number3))) {
+        if (isNaN(number1)) {
+            number1 = +prompt("Nhập lại số nguyên thứ nhất hợp lệ: ");
+        }
+        if (isNaN(number2)) {
+            number2 = +prompt("Nhập lại số nguyên thứ hai hợp lệ: ");
+        }
+        if (isNaN(number3)) {
+            number3 = +prompt("Nhập lại số nguyên thứ ba hợp lệ: ");
+        }
+    }
+
+    let result = findMin(number1, number2, number3);
+    alert(" số nhỏ nhất là " + result);
+
+    function findMin(a, b, c) {
+        let min = a;
+        if (min > b) {
+            min = b;
+        }
+        if (min > c) {
+            min = c;
+        }
+        return min;
+    }
 </script>
 </body>
 </html>

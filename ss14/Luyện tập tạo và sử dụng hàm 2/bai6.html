@@ -10,7 +10,7 @@
         let number;
         while (true) {
             number = prompt("Nhập vào 1 số nguyên: ");
-            if (number && !isNaN(number)) {
+            if (!isNaN(number)) {
                 number = parseInt(number);
                 break;
             }

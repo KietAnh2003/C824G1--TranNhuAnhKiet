@@ -6,25 +6,26 @@
 </head>
 <body>
 <script>
-    isPrime();
-
-    function isPrime(number = +prompt("Hãy nhập 1 số để kiểm tra có phải số nguyên tố không")) {
-        if (number < 2) {
-            alert(number + " không phải là số nguyên tố");
-        }
-        let isPrime = true;
+    function isPrime() {
+        if (number < 2) return false;
         for (let i = 2; i <= Math.sqrt(number); i++) {
             if (number % i === 0) {
-                isPrime = false;
-                break;
+                return false;
             }
         }
-        if (isPrime) {
-            alert(number + " là số nguyên tố");
-        } else {
-            alert(number + " không phải là số nguyên tố");
-        }
+        return true;
     }
+
+    let number = +prompt("Hãy nhập 1 số để kiểm tra có phải số nguyên tố không")
+    if (isNaN(number)) {
+        alert(" Hãy nhập giá trị hợp lệ");
+    }else if (isPrime()) {
+        alert(number + " là số nguyên tố")
+    } else {
+        alert(number + " không phải là số nguyên tố")
+    }
+
+
 </script>
 </body>
 </html>
