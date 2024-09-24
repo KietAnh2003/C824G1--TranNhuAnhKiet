@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lí sản phẩm</title>
+    <style>
+        table {
+            text-align: center;
+        }
+        button {
+            background-color: rgba(6,242,0,0.78); color: ;
+            border-radius:7px;
+        }
+    </style>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input id="addProduct" placeholder="Nhập tên sản phẩm">
+<button onclick="addProduct()" id="btn-add">Add</button>
+<h3>Display All Product</h3>
+<div id="arrLength"></div>
+<div id="result"></div>
+
+<script>
+    let arrProduct = [];
+
+    function addProduct() {
+        let productAdd = document.getElementById("addProduct").value;
+        if (productAdd.trim() === "") {
+            alert("Hãy nhập tên sản phẩm")
+        } else {
+            let trungLap = false;
+            for (let i in arrProduct) {
+                if (productAdd === arrProduct[i]) {
+                    trungLap = true;
+                }
+            }
+            if (trungLap) {
+                alert("Không nhập sản phẩm trùng lặp");
+            } else
+                arrProduct.push(productAdd)
+            displayProduct(arrProduct)
+            document.getElementById("arrLength").innerHTML = arrProduct.length + " product:";
+        }
+    }
+
+    function displayProduct(arr) {
+        let result = "<table width='400px' border='1'>"
+        for (let i in arr) {
+            result += `<tr>`
+            result += `<td>${arr[i]}</td>`
+            result += `<td><button>Edit</button></td>`
+            result += `<td><button onclick="deleteProduct(${i})" id="">Delete</button></td>`
+            result += `</tr>`
+        }
+        result += "</table>"
+        document.getElementById("result").innerHTML = result;
+    }
+    function deleteProduct(index){
+        let confirmDelete = confirm("Bạn muốn xóa sản phẩm?")
+        if (confirmDelete === true){
+            arrProduct.splice(index,1);
+            displayProduct(arrProduct);
+        }
+    }
+    displayProduct();
+
+</script>
+</body>
+</html>

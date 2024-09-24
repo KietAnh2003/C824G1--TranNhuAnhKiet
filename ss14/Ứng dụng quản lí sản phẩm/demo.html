@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            background-color: green; color: white;
+            border-radius: 10%;
+        }
+
+        button:hover {
+            background-color: white; color: black;
+        }
+        tr:hover {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+Product: <input id="product-add" placeholder="Nhập tên sản phẩm">
+<button id="btn-add">Thêm mới</button>
+<div id="result"></div>
+<script>
+    document.getElementById("btn-add").addEventListener("click", addProduct);
+
+    let arrProduct = ["Nokia", "SamSung", "Apple"];
+
+    function addProduct() {
+        let productAdd = document.getElementById("product-add").value
+        arrProduct.push(productAdd)
+        displayProduct(arrProduct)
+    }
+
+    function displayProduct(arr) {
+        let result = "<table width='500px' border='1px'>"
+        for (let i in arr) {
+            result += `<tr>`
+            result += `<td>${arr[i]}</td>`
+            result += `<td><button>Edit</button></td>`
+            result += `<td onclick="deleteProduct(${i})"><button>Delete</button></td>`
+            result += `</tr>`
+        }
+        result+="</table>"
+        document.getElementById("result").innerHTML=result
+    }
+
+    function deleteProduct(index) {
+        let isConfirm = confirm(`Bạn có thực sự muốn xóa sản phẩm ${arrProduct[index]} hay không?`)
+        if(isConfirm) {
+            arrProduct.splice(index, 1);
+            displayProduct(arrProduct)
+        }
+    }
+
+    displayProduct(arrProduct)
+
+
+</script>
+</body>
+</html>

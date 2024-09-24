@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QUản lí sản phẩm</title>
+  <style>
+    button {
+      background-color: green;
+      color: white;
+      border-radius: 10%;
+    }
+
+    button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    tr:hover {
+      background-color: aliceblue;
+    }
+
+  </style>
+</head>
+<body>
+Add New Product:<input id="product-add" placeholder="Nhập tên sản phẩm">
+<button id="btn-add">Thêm mới</button>
+<br>
+Display All Product:
+<div id="arrleng"></div>
+<div id="result"></div>
+<script>
+  document.getElementById("btn-add").addEventListener("click", addProduct);
+
+
+  let arrProduct = ["Nokia", "SamSung", "Apple"];
+
+  function addProduct() {
+    let productAdd = document.getElementById("product-add").value
+    if (productAdd.trim() === "") {
+      alert("Hãy nhập tên sản phẩm")
+    } else {
+      let trungLap = false;
+      for (let i in arrProduct) {
+        if (productAdd === arrProduct[i]) {
+          trungLap = true;
+        }
+      } if (trungLap) {
+        alert("Không nhập sản phẩm trùng lặp");
+      } else
+        arrProduct.push(productAdd)
+      displayProduct(arrProduct)
+      document.getElementById("arrleng").innerHTML = arrProduct.length + " product";
+    }
+  }
+  function displayProduct(arr) {
+    let result = "<table width='500px' border='1px'>";
+    for (let i in arr) {
+      result += `<tr>`
+      result += `<td>${arr[i]}</td>`
+      result += `<td><button>Edit</button></td>`
+      result += `<td onclick="deleteProduct(${i})"><button>Delete</button></td>`
+      result += `</tr>`
+    }
+    result += "</table>"
+    document.getElementById("result").innerHTML = result
+  }
+  displayProduct(arrProduct)
+</script>
+</body>
+</html>
