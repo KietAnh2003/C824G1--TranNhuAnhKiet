@@ -1,29 +1,20 @@
 <body>
 <script>
-    function check_star(star) {
-        let index_star1 = 0;
-        let result = "";
-        for (let i = 0; i < star1.length; i++) {
-            if (star == star1[i]) {
-                index_star1 = i;
-                for (let j = 0; j < star2.length; j++) {
-                    if (index_star1 == j) {
-                        result = star2[j];
-                        return result;
-                    } else {
-                        result = "Không tìm thấy chòm sao"
-                        return result;
-                    }
-                }
-            } else {
-                result = "Không tìm thấy sao";
-                return result;
-            }
-        }
-
+    function modify(x) {
+        x.length = 0;  // Xóa toàn bộ phần tử hiện tại
+        x.push(5, 6, 7, 8);  // Thêm các phần tử mới vào mảng
     }
+    let array2 = [1, 2, 3, 4];
+    modify(array2);
+    console.log(array2);  // Kết quả: [5, 6, 7, 8]
 
-    let star = prompt("Nhập vào ngôi sao: ")
-    document.write(check_star(star));
+
+    function modify(x) {
+        x.name = 'Alice';
+    }
+    let person = { name: 'Bob' };
+    modify(person);
+    console.log(person.name); // Kết quả: 'Alice'
+
 </script>
 </body>

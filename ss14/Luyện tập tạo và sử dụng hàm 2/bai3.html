@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+<script>
+    let number;
+    calculateFactorial();
+
+    function calculateFactorial() {
+        do {
+            number = parseInt(prompt("Nhập vào số nguyên dương n để tính giai thừa: n!"));
+        } while (isNaN(number) || number < 0);
+        if (number === 0) {
+            alert("Giai thừa của số 0, 0! mặc định là: 1");
+        } else {
+            let factorial = 1;
+            for (let i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+            alert("Giai thừa của " + number + " là: " + factorial);
+        }
+    }
+</script>
+</body>
+</html>

@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tính bình phương</title>
 </head>
 <body>
+<script>
+    let number = +prompt("Hãy nhập một số để tính bình phương:");
+    let result = square(number);
+    alert("Bình phương của " + number + " là: " + result);
 
+    function square(number) {
+        return number * number;
+    }
+</script>
 </body>
 </html>

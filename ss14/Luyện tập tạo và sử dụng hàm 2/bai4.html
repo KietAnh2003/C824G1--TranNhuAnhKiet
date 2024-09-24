@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự có phải là số không</title>
+</head>
+<body>
+<script>
+    function checkCharNumber(char) {
+        if (!isNaN(char)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let char = prompt("Hãy nhập vào 1 ký tự:");
+    let result = checkCharNumber(char);
+    if (result) {
+        alert("True");
+    } else {
+        alert("False");
+    }
+</script>
+</body>
+</html>
