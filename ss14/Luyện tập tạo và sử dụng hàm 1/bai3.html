@@ -9,16 +9,16 @@
 <script>
     let number1 = +prompt("Hãy nhập số thứ nhất")
     let number2 = +prompt("Hãy nhập số thứ hai")
-  getNumber(number1,number2);
+    alert(getNumber(number1, number2));
 
-  function  getNumber(){
-    let result = number1 + number2;
-   if(number1 > number2){
-     alert("Số thứ nhất lớn hơn")
-   } else {
-     alert(" Kết quả là: " + result);
-   }
-  }
+    function getNumber() {
+        let result = number1 + number2;
+        if (number1 > number2) {
+            return "Số thứ nhất lớn hơn số thứ hai ";
+        } else {
+            return result;
+        }
+    }
 </script>
 </body>
 </html>
