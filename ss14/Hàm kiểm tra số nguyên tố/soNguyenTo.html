@@ -6,10 +6,10 @@
 </head>
 <body>
 <script>
-    function isPrime() {
-        if (number < 2) return false;
-        for (let i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i === 0) {
+    function isPrime(a) {
+        if (a < 2) return false;
+        for (let i = 2; i <= Math.sqrt(a); i++) {
+            if (a % i === 0) {
                 return false;
             }
         }
@@ -19,7 +19,7 @@
     let number = +prompt("Hãy nhập 1 số để kiểm tra có phải số nguyên tố không")
     if (isNaN(number)) {
         alert(" Hãy nhập giá trị hợp lệ");
-    }else if (isPrime()) {
+    }else if (isPrime(number)) {
         alert(number + " là số nguyên tố")
     } else {
         alert(number + " không phải là số nguyên tố")
