@@ -9,10 +9,12 @@
             color: white;
             border-radius: 10%;
         }
+
         button:hover {
             background-color: white;
             color: black;
         }
+
         tr:hover {
             background-color: aliceblue;
         }
@@ -22,12 +24,13 @@
 <h3>Add New Product</h3>
 
 Code: <input id="code" placeholder="Nhập mã sản phẩm"> <br>
-Name: <input id="name" placeholder="Nhập tên sản phẩm">  <br>
+Name: <input id="name" placeholder="Nhập tên sản phẩm"> <br>
 Price: <input id="price" placeholder="Nhập giá sản phẩm"> <br>
 Description: <input id="description" placeholder="Nhập mô tả sản phẩm"> <br>
 Size: <input id="size" placeholder="Nhập kích cỡ sản phẩm"> <br>
 Quantity: <input id="quantity" placeholder="Nhập số lượng sản phẩm"> <br>
-<button onclick="addProduct()" id="btn-add">Thêm</button> <br>
+<button onclick="addProduct()" id="btn-add">Thêm</button>
+<br>
 Tìm: <input id="find" placeholder="Nhập tên sản phẩm">
 <button onclick="findName()" id="findname">Tìm kiếm</button>
 <h3>Display All Product</h3>
@@ -52,6 +55,7 @@ Tìm: <input id="find" placeholder="Nhập tên sản phẩm">
             this.size = size;
             this.quantity = quatity;
         }
+
         displayInformation() {
             let result = `Code: ${this.code}, tên: ${this.name}`;
             return result
@@ -73,8 +77,9 @@ Tìm: <input id="find" placeholder="Nhập tên sản phẩm">
         arrProduct.push(product)
         displayProduct(arrProduct)
     }
+
     function displayProduct(arr) {
-        arr.sort(function (a,b) {
+        arr.sort(function (a, b) {
             return b.name.localeCompare(a.name)
         })
         let result = "<table width='1000px' border='1px'>"
@@ -99,26 +104,30 @@ Tìm: <input id="find" placeholder="Nhập tên sản phẩm">
             result += `<td onclick="deleteProduct(${i})"><button>Delete</button></td>`
             result += `</tr>`
         }
-        result+="</table>"
-        document.getElementById("result").innerHTML=result
+        result += "</table>"
+        document.getElementById("result").innerHTML = result
     }
-    function deleteProduct(index){
+
+    function deleteProduct(index) {
         let confirmDelete = confirm(`Bạn muốn xóa sản phẩm ${arrProduct[index].name} ?`)
-        if (confirmDelete === true){
-            arrProduct.splice(index,1);
+        if (confirmDelete === true) {
+            arrProduct.splice(index, 1);
             displayProduct(arrProduct);
         }
     }
-    function findName(){
+
+    function findName() {
         let name = document.getElementById("find").value.toLowerCase();
-        let findProduct = arrProduct.filter(function(product) {
-            return product.name.toLowerCase().includes(name) })
+        let findProduct = arrProduct.filter(function (product) {
+            return product.name.toLowerCase().includes(name)
+        })
         if (findProduct.length <= 0 || name === "") {
             document.getElementById("result").innerHTML = " Không tìm thấy sản phẩm"
         } else {
             displayProduct(findProduct);
         }
     }
+
     displayProduct();
 
 </script>
