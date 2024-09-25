@@ -7,15 +7,15 @@
 <body>
 <script>
     function checkCharNumber(char) {
-        if (!isNaN(char)) {
+        if (!isNaN(char) && char !== " " && char.length === 1) {
             return true;
         } else {
             return false;
         }
     }
 
-    let char = prompt("Hãy nhập vào 1 ký tự:");
-    let result = checkCharNumber(char);
+    let character = prompt("Hãy nhập vào 1 ký tự:");
+    let result = checkCharNumber(character);
     if (result) {
         alert("True");
     } else {

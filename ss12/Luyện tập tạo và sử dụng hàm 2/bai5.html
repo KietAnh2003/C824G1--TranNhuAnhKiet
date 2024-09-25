@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên nhỏ nhất</title>
+</head>
+<body>
+<script>
+
+    let number1 = isPrime(prompt("Nhập số nguyên thứ nhất: "));
+    let number2 = isPrime(prompt("Nhập số nguyên thứ hai: "));
+    let number3 = isPrime(prompt("Nhập số nguyên thứ ba: "));
+    let result = findMin(number1, number2, number3);
+    alert(" số nhỏ nhất là " + result);
+
+    function isPrime(number) {
+        while (isNaN(number) || !parseInt(number) === number) {
+            number = +prompt('Nhập lại số nguyên vì đã nhập sai');
+        }
+        return number;
+    }
+
+    function findMin(a, b, c) {
+        let min = a;
+        if (min > b) {
+            min = b;
+        }
+        if (min > c) {
+            min = c;
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

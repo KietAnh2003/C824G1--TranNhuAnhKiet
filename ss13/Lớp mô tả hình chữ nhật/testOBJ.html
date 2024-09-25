@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Khai báo lớp Apple với các thuộc tính type, color,
+    //phương thức getAppleInfo()
+    function Apple (type) {
+        this.type = type;
+        this.color = "red";
+        this.getInfo = getAppleInfo;
+    }
+    //Khai báo hàm getAppleInfo()
+    //Khuyến nghị: đây là cách không nên dùng,
+    //đọc tiếp sẽ rõ
+    function getAppleInfo() {
+        return this.color + ' ' + this.type + ' apple';
+    }
+    let apple = new Apple('macintosh');
+    apple.color = "reddish";
+    alert(apple.getInfo());
+    function Apple (type) {
+        this.type = type;
+        this.color = "red";
+        this.getInfo = function() {
+            return this.color + ' ' + this.type + ' apple';
+        };
+    } // 2 cách trên là sử dụng hàm
+    // Khai báo bằng Prototype
+
+
+
+</script>
+</body>
+</html>
