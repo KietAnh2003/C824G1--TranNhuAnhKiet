@@ -118,16 +118,13 @@ Tìm: <input id="find" placeholder="Nhập tên sản phẩm">
 
     function findName() {
         let name = document.getElementById("find").value.toLowerCase();
-        let findProduct = arrProduct.filter(function (product) {
-            return product.name.toLowerCase().includes(name)
-        })
+        let findProduct = arrProduct.filter(product => product.name.toLowerCase().includes(name));
         if (findProduct.length <= 0 || name === "") {
             document.getElementById("result").innerHTML = " Không tìm thấy sản phẩm"
         } else {
             displayProduct(findProduct);
         }
     }
-
     displayProduct();
 
 </script>
