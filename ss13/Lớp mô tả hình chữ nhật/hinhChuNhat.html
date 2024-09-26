@@ -2,52 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lớp hình chữ nhật</title>
+    <title>Main</title>
 </head>
 <body>
-<canvas id="DemoCanvas" width="600" height="400"></canvas>
+<label>Width  :</label>
+<input type="text" id = "width" placeholder="nhập chiều rộng"> <br>
+<label>Height:</label>
+<input type="text" id = "height" placeholder="nhập chiều dài"><br>
+<button onclick="display()">Dispay</button>
+<p id="acreage" >Acreage</p>
+<p id="perimeter" >Perimeter</p>
+<canvas id="Canvas" width="500" height="600"></canvas>
+
 <script>
+
     class Rectangle {
         width;
         height;
-        constructor (width,height) {
+        constructor(width, height) {
             this.width = width;
             this.height = height;
         }
-        getWidth() {
-            return this.width;
+        CalculateAcreage() {
+            return  this.width * this.height;        // tính diện tích
         }
-        getHeight() {
-            return this.height;
+        CalculatePerimeter() {
+            return ( this.width + this.height ) * 2;   //tính chu vi
         }
-        setWidth(width) {
-            this.width = width;
-        }
-        setHeight(height) {
-            this.height = height;
-        }
-        getArea() {
-            return this.width * this.height;
-        }
-        getPerimeter() {
-            return (this.width + this.height) * 2;
+        getCanvas() {
+            let myCanvas = document.getElementById("Canvas");
+            let ctx = myCanvas.getContext("2d");
+            ctx.fillStyle='#fa4b2a';
+            ctx.fillRect(10, 10, this.width, this.height);
         }
     }
-    let myRectangle = new Rectangle(150,50);
-    let width = myRectangle.getWidth();
-    let height = myRectangle.getHeight();
-
-    myRectangle.setWidth(200);
-    myRectangle.getWidth();
-
-    document.write(myRectangle.getWidth());
-
-
-    let canvas = document.getElementById("DemoCanvas");
-    let ctx = canvas.getContext('2d');
-    ctx.fillStyle='#fa4b2a';
-    ctx.fillRect(10, 10, width, height)
-
+    function display () {
+        let width = parseFloat(document.getElementById("width").value);
+        let height = parseFloat(document.getElementById("height").value);
+        let newRetangcle = new Rectangle(width, height);
+        document.getElementById("acreage").innerHTML = " Acreage = " + newRetangcle.CalculateAcreage();
+        document.getElementById("perimeter").innerHTML = " Perimeter = " + newRetangcle.CalculatePerimeter();
+        newRetangcle.getCanvas();
+    }
 </script>
 </body>
 </html>
