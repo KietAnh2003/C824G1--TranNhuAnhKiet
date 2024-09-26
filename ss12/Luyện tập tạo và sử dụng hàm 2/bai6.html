@@ -12,20 +12,19 @@
     }
 
     function isInteger(a) {
-        while (true) {
-            if (!isNaN(a)) {
-                a = parseInt(a);
-                return a = true;
-            }
-        }
+        if (!isNaN(a) && a > 0) {
+            a = parseInt(a);
+            return true;
+        } else
+            return false;
     }
 
-    if (number) {
+    if (isInteger(number)) {
         alert("True");
     } else {
         alert("False");
     }
-    isInteger(number);
+
 </script>
 </body>
 </html>
