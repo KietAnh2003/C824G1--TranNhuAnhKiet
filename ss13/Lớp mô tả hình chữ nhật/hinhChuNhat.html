@@ -23,10 +23,10 @@
             this.width = width;
             this.height = height;
         }
-        CalculateAcreage() {
+        calculateAcreage() {
             return  this.width * this.height;        // tính diện tích
         }
-        CalculatePerimeter() {
+        calculatePerimeter() {
             return ( this.width + this.height ) * 2;   //tính chu vi
         }
         getCanvas() {
@@ -38,10 +38,16 @@
     }
     function display () {
         let width = parseFloat(document.getElementById("width").value);
+        if (isNaN(width) || width < 0) {
+            alert("Hãy nhập lại width hợp lí")
+        }
         let height = parseFloat(document.getElementById("height").value);
+        if (isNaN(height) || height < 0) {
+            alert("Hãy nhập lại height dài hợp lí")
+        }
         let newRetangcle = new Rectangle(width, height);
-        document.getElementById("acreage").innerHTML = " Acreage = " + newRetangcle.CalculateAcreage();
-        document.getElementById("perimeter").innerHTML = " Perimeter = " + newRetangcle.CalculatePerimeter();
+        document.getElementById("acreage").innerHTML = " Acreage = " + newRetangcle.calculateAcreage();
+        document.getElementById("perimeter").innerHTML = " Perimeter = " + newRetangcle.calculatePerimeter();
         newRetangcle.getCanvas();
     }
 </script>
