@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng câu chuyện Adam và Eva </title>
+</head>
+<body>
+<script>
+    class Apple {
+        weight;
+        constructor(weight) {
+            this.weight = weight;
+        }
+        decrease(weight) {
+            return weight--;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+    class Human {
+        name;
+        gender;
+        weight;
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        getName() {
+            return this.name
+        }
+        setName(name) {
+            return this.name = name;
+        }
+        isMale() {
+            if (this.gender === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        getGender() {
+            if (this.isMale()) {
+                return "Male";
+            } else {
+                return "Female";
+            }
+        }
+        checkApple(apple) {
+            return apple.isEmpty();
+        }
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.decrease();
+                this.weight++;
+            } else {
+                alert("Apple đã hết")
+            }
+        }
+        say(string) {
+            console.log(string)
+        }
+        getWeight() {
+            return this.weight
+        }
+        setWeight(weight) {
+            return this.weight = weight
+        }
+        getInfo(human) {
+            alert(human.name + " " + human.weight + " " + human.getGender());
+        }
+    }
+
+    let adam = new Human("Adam", 1, 100);
+    let eva = new Human("Eva", 2, 70);
+    let apple = new Apple(10);
+    adam.say("hello eva" + <br/>);
+    eva.say("hello adam" + <br/>);
+
+    while (apple.isEmpty() !== true) {
+        document.write("Adam ăn táo" + "<br>");
+        adam.eat(apple);
+
+        document.write("Quả táo còn: " + "<br>");
+        document.write(apple.getWeight() + " đơn vị" + "<br>");
+        document.write("Cân nặng của Adm là: " + adam.getWeight() + " đơn vị" + "<br>");
+
+        document.write("<br>")
+
+        document.write("Eva ăn táo" + "<br>");
+        eva.eat(apple);
+
+        document.write("Quả táo còn: " + "<br>");
+        document.write(apple.getWeight() + " đơn vị" + "<br>");
+        document.write("Cân nặng là: " + eva.getWeight() + " đơn vị" + "<br>");
+    }
+</script>
+</body>
+</html>

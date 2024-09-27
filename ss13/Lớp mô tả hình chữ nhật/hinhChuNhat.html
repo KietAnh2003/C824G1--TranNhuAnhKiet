@@ -40,10 +40,12 @@
         let width = parseFloat(document.getElementById("width").value);
         if (isNaN(width) || width < 0) {
             alert("Hãy nhập lại width hợp lí")
+            return;
         }
         let height = parseFloat(document.getElementById("height").value);
         if (isNaN(height) || height < 0) {
             alert("Hãy nhập lại height dài hợp lí")
+            return;
         }
         let newRetangcle = new Rectangle(width, height);
         document.getElementById("acreage").innerHTML = " Acreage = " + newRetangcle.calculateAcreage();
