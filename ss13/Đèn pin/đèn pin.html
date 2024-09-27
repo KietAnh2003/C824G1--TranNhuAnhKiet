@@ -6,62 +6,47 @@
 </head>
 <body>
 <script>
-    class electricLamp {
-        energy;
-        constructor(energy) {
-            this.energy = energy
+    class ElectricLamp {
+        status
+        constructor(status) {
+            this.status = status;
         }
-        setEnergy(energy) {
-            return this.energy = energy;
+        turnOff() {
+             this.status = false;
         }
-        getEnergy() {
-            return this.energy;
+        turnOn() {
+             this.status = true;
         }
     }
-    class switchButton {
+    class SwitchButton {
         status;
-        battery;
-        constructor(status, battery) {
-                setEnergy = function (energy) {
-                    this.energy = energy;
-                };
-            this.getEnergy = function () {
-                return this.energy;
-            };
-            this.decreaseEnergy = function () {
-                if (this.energy > 0) {
-                    this.energy--;
-                }
-            }
-        };
-        let FlashLamp = function () {
-
-            this.setBattery = function (battery) {
-                this.battery = battery;
-            };
-
-            this.getBatteryInfo = function () {
-                return this.battery.getEnergy();
-            };
-
-            this.light = function () {
-                if(this.status){
-                    alert("Lighting");
-                } else {
-                    alert("Not lighting");
-                }
-            };
-
-            this.turnOn = function () {
-                this.status = true;
-            };
-
-            this.turnOff = function () {
-                this.status = false;
-            }
+        lamp;
+        constructor(status, lamp) {
+            this.status = false;
+            this.lamp = lamp;
         }
-    }
+        connectToLamp(electricLamp) {
+            this.lamp = electricLamp
+        }
+        switchOff(){
+            this.status=false;
+                this.lamp.turnOff();
 
+        }
+        switchOn(){
+            this.status=true;
+                this.lamp.turnOn();
+            }
+    }
+    let lamp1 = new ElectricLamp(false);
+    let switchButton1 = new SwitchButton(lamp1);
+    switchButton1.connectToLamp(lamp1);
+    for(let i=0;i<5;i++) {
+        switchButton1.switchOn();
+        document.write("Lamp is turn on <br>")
+        switchButton1.switchOff();
+        document.write("Lamp is turn off <br>")
+    }
 </script>
 </body>
 </html>
