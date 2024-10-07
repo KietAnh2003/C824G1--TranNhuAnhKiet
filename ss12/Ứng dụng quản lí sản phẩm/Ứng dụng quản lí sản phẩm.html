@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>Quản lí sản phẩm</title>
     <style>
+        h1{
+            color: white;
+            text-align: center;
+            width : 1350px;
+            height :100px;
+            background-color: green;
+            margin: 0;
+        }
         button {
             background-color: green;
             color: white;
@@ -21,6 +29,7 @@
     </style>
 </head>
 <body>
+<h1> MY PRODUCTS </h1>
 <h3>Add New Product</h3>
 
 Code: <input id="code" placeholder="Nhập mã sản phẩm"> <br>
@@ -108,23 +117,23 @@ Tìm: <input id="find" placeholder="Nhập tên sản phẩm">
         document.getElementById("result").innerHTML = result
     }
 
-    function deleteProduct(index) {
-        let confirmDelete = confirm(`Bạn muốn xóa sản phẩm ${arrProduct[index].name} ?`)
-        if (confirmDelete === true) {
-            arrProduct.splice(index, 1);
-            displayProduct(arrProduct);
-        }
-    }
-
-    function findName() {
-        let name = document.getElementById("find").value.toLowerCase();
-        let findProduct = arrProduct.filter(product => product.name.toLowerCase().includes(name));
-        if (findProduct.length <= 0 || name === "") {
-            document.getElementById("result").innerHTML = " Không tìm thấy sản phẩm"
-        } else {
-            displayProduct(findProduct);
-        }
-    }
+    // function deleteProduct(index) {
+    //     let confirmDelete = confirm(`Bạn muốn xóa sản phẩm ${arrProduct[index].name} ?`)
+    //     if (confirmDelete === true) {
+    //         arrProduct.splice(index, 1);
+    //         displayProduct(arrProduct);
+    //     }
+    // }
+    //
+    // function findName() {
+    //     let name = document.getElementById("find").value.toLowerCase();
+    //     let findProduct = arrProduct.filter(product => product.name.toLowerCase().includes(name));
+    //     if (findProduct.length <= 0 || name === "") {
+    //         document.getElementById("result").innerHTML = " Không tìm thấy sản phẩm"
+    //     } else {
+    //         displayProduct(findProduct);
+    //     }
+    // }
     displayProduct();
 
 </script>

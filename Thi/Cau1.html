@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiệu của tổng số chẵn là lẻ</title>
+</head>
+<body>
+
+<script>
+    let sumOld = 0;
+    let sumEven = 0;
+    let array = [];
+    let n = +prompt(" Hãy nhập số lượng số nguyên tối đa là 20 số:");
+    while ( n >= 20 || n < 0 || isNaN(n) || n ===""){
+     n = +prompt(" Hãy nhập lại số lượng hợp lí!");
+    }
+
+    for ( let i = 0; i < n; i ++){
+        let number = +prompt("Nhâp số nguyên thứ: " + (i+1) )
+        array.push(number);
+    }
+    alert("Danh sách mảng gồm có: " + array)
+
+    for ( let i = 0; i < array.length; i++){
+        if ( array[i] % 2 === 0 ){
+            sumEven += array[i];
+        }else {
+            sumOld += array[i];
+        }
+    }
+    let result = sumEven - sumOld;
+    alert("Hiệu của tổng các số chẵn và tổng các số lẻ là: " +  result)
+</script>
+</body>
+</html>
