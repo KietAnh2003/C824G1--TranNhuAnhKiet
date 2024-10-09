@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone</title>
+</head>
+<body>
+
+
+
+<script>
+    class Mobile {
+        pin;
+        name;
+        constructor(pin,name) {
+            this.pin;
+            this.name;
+            this.message = "";
+            this.setMessage = function (message) {
+                this.message = message;
+            }
+            this.getMessage = function () {
+                return this.message;
+            }
+            this.sendMessage = function (message, mobile) {
+                mobile.setMessage(message);
+            }
+        }
+    }
+    let iphone = new Mobile(50, "Iphone" );
+    let samsung = new Mobile(70,"Samsung");
+    iphone.sendMessage("Hello from Iphone", samsung);
+    let message = samsung.getMessage();
+    alert(message);
+    console.log(message)
+
+</script>
+</body>
+</html>

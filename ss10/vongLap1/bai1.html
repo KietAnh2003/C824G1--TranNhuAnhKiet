@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm Từ 1 Đến 100</title>
+
+</head>
+<body>
+<h1>Đếm Từ 1 Đến n</h1>
+<button onclick="dem()" id="nutDem">Bắt đầu đếm</button>
+<div id="ketQua"></div>
+<script>
+    function dem() {
+        let n = parseInt(prompt("nhập số cần đếm đến ( in ra trừ đi 1 ) "))
+        let ketQua = " ";
+        for (let i = 0; i < n ; i++) {
+            ketQua = ketQua + i + " ";
+            if (i === n ) {
+                alert('Đã hoàn thành!');
+            }
+        }
+        document.getElementById("ketQua").innerText = ketQua;
+    }
+</script>
+</body>
+</html>

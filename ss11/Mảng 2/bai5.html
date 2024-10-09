@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<h2>So sánh 2 chuỗi</h2>
+<label for="text1"></label><input type="text" id="text1" placeholder="Hãy nhập chuỗi"> <br> <br>
+<label for="text2"></label><input type="text" id="text2" placeholder="Hãy nhập chuỗi"> <br> <br>
+<button onclick="compare()">So sánh</button>
+<div id="result"></div>
+
+<script>
+    function compare() {
+        let string1 = document.getElementById("text1").value;
+        let string2 = document.getElementById("text2").value;
+        if (string1 === string2) {
+            document.getElementById("result").innerHTML = "Hai chuỗi giống nhau"
+        } else {
+            document.getElementById("result").innerHTML = "Hai chuỗi không giống nhau"
+        }
+    }
+</script>
+</body>
+</html>

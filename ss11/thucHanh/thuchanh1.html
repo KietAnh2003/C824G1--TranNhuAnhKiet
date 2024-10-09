@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tìm từ tiếng Anh</title>
+</head>
+<body>
+<h1>Tìm từ tiếng Việt tương ứng</h1>
+<form id="searchForm">
+  <label for="searchTerm">Nhập từ tiếng Anh:</label>
+  <input type="text" id="searchTerm" placeholder="Từ tiếng Anh">
+  <button type="button" onclick="findTranslation()">Tìm kiếm</button>
+</form>
+<p>Kết quả: <span id="result"></span></p>
+
+<script>
+  // Tạo hai mảng với độ dài bằng nhau
+  var englishWords = ["hello", "world", "goodbye", "cat", "dog"];
+  var vietnameseWords = ["xin chào", "thế giới", "tạm biệt", "mèo", "chó"];
+
+  // Hàm tìm kiếm từ tiếng Anh và hiển thị từ tiếng Việt tương ứng
+  function findTranslation() {
+    // Lấy từ tiếng Anh từ ô nhập liệu
+    var searchTerm = document.getElementById("searchTerm").value.trim().toLowerCase();
+    var resultElement = document.getElementById("result");
+
+    // Tìm vị trí của từ trong mảng tiếng Anh
+    var index = englishWords.indexOf(searchTerm);
+
+    // Kiểm tra và hiển thị kết quả
+    if (index !== -1) {
+      // Nếu tìm thấy, hiển thị từ tiếng Việt tương ứng
+      resultElement.innerText = vietnameseWords[index];
+    } else {
+      // Nếu không tìm thấy, hiển thị thông báo không tìm thấy
+      resultElement.innerText = "Không tìm thấy từ tương ứng.";
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số nguyên tố</title>
+</head>
+<body>
+<script>
+    let array1 = [1, 2, 3, 9, 8, 7, 4, 5, 6];
+    let array2 = [];
+    function find(a) {
+        for (let i = 0; i < a.length; i++) {
+            let isPrime = true;
+            if (a[i] < 2) {
+                isPrime = false;
+            } else {
+                for (let j = 2; j <= Math.sqrt(a[i]); j++) {
+                    if (a[i] % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            if (isPrime) {
+                array2.push(a[i]);
+            }
+        }
+        array2.sort(function(a, b) {
+            return a - b;
+        });
+       alert(array2);
+    }
+    find(array1);
+</script>
+</body>
+</html>

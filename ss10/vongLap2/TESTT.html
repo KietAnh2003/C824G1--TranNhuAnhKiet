@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>In hình chữ nhật với cạnh dài và ngắn</title>
+</head>
+<body>
+<script>
+  let canhDai = parseInt(prompt("cạnh dài"))
+  let canhNgan = parseInt(prompt("cạnh ngắn"))
+  let count;
+  for(let i=0; i<=canhNgan; i++){
+    count = '';
+    for(let j=0; j<=canhDai; j++){
+      if(i===0||j===0||i===canhNgan||j===canhDai){
+        count += " * ";
+      }else{
+        count += "&nbsp";
+      }
+    }
+    document.write(count+'<br>');
+  }
+</script>
+</body>
+</html>

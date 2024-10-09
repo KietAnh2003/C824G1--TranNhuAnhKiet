@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<h1> Sắp xếp mảng theo thứ tự giảm dần</h1>
+<button onclick="arrange()"> Sắp xếp và hiển thị mảng</button>
+<div id="result"></div>
+
+<script>
+    function arrange() {
+        let array = [1, 2, 3, 4, 5, 10, 6, 7, 8, 9];
+        array.sort(function (a, b) {
+            return b - a;
+        });
+        document.getElementById("result").innerHTML = "Mảng đã sắp xếp là: " + array
+    }
+</script>
+</body>
+</html>

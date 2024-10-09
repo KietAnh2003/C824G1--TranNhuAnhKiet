@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input id="doC" value="25 độ C" placeholder="Nhập độ C">
+<button type="button" onclick="calculate()">Calculate</button>
+<p id="doF"></p>
+<p id="doK"></p>
+
+<script>
+  class Temperature {
+    C;
+    constructor(C) {
+      this.C = C;
+    }
+    changeF() {
+      return this.C * 1.8 + 32;
+    }
+    changeK() {
+      return this.C * 273.15;
+    }
+  }
+  let temperature = new Temperature(25);   // hiển thị 25 độ C ban đầu
+  let myChangeF = temperature.changeF();
+  let myChangK = temperature.changeK()
+  document.getElementById("doF").innerHTML = "Nhiệt độ F: " + myChangeF.toFixed(2);
+  document.getElementById("doK").innerHTML = "Nhiệt độ K: " + myChangK.toFixed(2);
+
+  function calculate() {
+    let temp = parseFloat(document.getElementById("doC").value);
+    if (isNaN(temp)) {
+      document.getElementById("doF").innerHTML = "Hãy nhập số hợp lệ để chuyển thành độ F! ";
+      document.getElementById("doK").innerHTML = "Hãy nhập số hợp lệ để chuyển thành độ K! ";
+    } else {
+      let temperature = new Temperature(temp);
+      document.getElementById("doF").innerHTML = "Nhiệt độ F: " + temperature.changeF().toFixed(2);
+      document.getElementById("doK").innerHTML = "Nhiệt độ K: " + temperature.changeK().toFixed(2);
+    }
+  }
+</script>
+</body>
+</html>

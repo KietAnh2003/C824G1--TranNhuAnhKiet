@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra nhiệt độ</title>
+</head>
+<body>
+<script>
+        let nhietDo = parseFloat(prompt('Nhập nhiệt độ hiện tại:'));
+        while (isNaN(nhietDo) || nhietDo>100 || nhietDo<20) {
+            if (isNaN(nhietDo)) {
+                alert('Hãy nhập giá trị hợp lệ');
+                nhietDo = parseFloat(prompt("Hãy nhập lại giá trị hợp lệ"));
+            } else if (nhietDo>100) {
+                 alert('Nhiệt độ quá cao');
+                nhietDo = parseFloat(prompt("Hãy giảm nhiệt độ"));
+            } else if (nhietDo<20) {
+                 alert('Nhiệt độ quá thấp');
+                nhietDo = parseFloat(prompt("Hãy tăng nhiệt độ"));
+            }
+        }
+        alert('Nhiệt độ hợp lí');
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính</title>
+</head>
+<body>
+  <form>
+    <h1> Caculator </h1>
+      <label for="numBer1"></label><input type="number" id="numBer1" placeholder="Nhập số thứ 1">
+    <label for="numBer2"></label><input type="number" id="numBer2" placeholder="Nhập số thứ 2"> <br>
+
+    <table>
+      <tr>
+        <td> <button type="button" onclick="add()" >Addition(+)</button> </td>
+        <td> <button type="button" onclick="sub()" >Subtraction(-)</button> </td>
+        <td> <button type="button" onclick="mul()" >Multiplication(X)</button> </td>
+        <td> <button type="button" onclick="div()" >Division(/)</button> </td>
+      </tr>
+      <tr>
+        <td> <h3> Kết quả là: </h3> </td>
+        <td> <div id="ketQua"  > </div>  </td>
+      </tr>
+    </table>
+  </form>
+<script src = "tinhTien.js"> </script>
+</body>
+</html>

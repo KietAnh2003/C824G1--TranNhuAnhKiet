@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>In ra hình chữ nhật với chiều dài và chiều rộng</title>
+</head>
+<body>
+<script>
+  let canhChieuDai =  parseInt(prompt("nhập cạnh chiều dài:"));
+  let canhChieuRong = parseInt(prompt("nhập cạnh chiều rộng:"));
+  let i;
+  let j;
+  for (  i = 0; i <= canhChieuRong; i++) {
+    for (  j = 0; j <= canhChieuDai; j++) {
+      if (i === 0 || i === canhChieuRong || j === 0 || j === canhChieuDai) {
+        document.write(" * ");
+      } else
+        document.write("&#8192 ");
+    }
+    document.write("<br>")
+  }
+</script>
+</body>
+</html>

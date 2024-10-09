@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<button onclick="noiMang()"> Nối mảng</button>
+<div id="mangDaNoi"></div>
+<script>
+    let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let b = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+    let c = new Array(20);
+
+    function noiMang() {
+        let c = b.concat(a);
+        document.getElementById("mangDaNoi").innerHTML = "Mảng đã nối là: " + c;
+    }
+</script>
+</body>
+</html>

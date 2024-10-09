@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>diemThi</title>
+</head>
+<body>
+<div id="ketQuaThi" ></div>
+<script>
+  let diemThi=parseFloat(prompt("Nhập điểm thi"));
+  let ketQua;
+  if (100 >= diemThi && diemThi >= 75){
+    ketQua = "Pass Module";
+  } else if (100 >= diemThi && diemThi >= 0) {
+    ketQua = "DO NOT PASS";
+  } else {
+    ketQua = "Hãy nhập điểm từ 0 đến 100!"
+  }
+  document.getElementById("ketQuaThi").innerHTML = ketQua;
+</script>
+</body>
+</html>

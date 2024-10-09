@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 Số Nguyên Tố Đầu Tiên</title>
+</head>
+<body>
+<h1>Hiển thị 20 số nguyên tố đầu tiên</h1>
+<button onclick="primeNumber()">Hiển thị số nguyên tố</button>
+<div id="isPrime"></div>
+<script>
+    function primeNumber() {
+        let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần in ra:"));
+        let count = 0;
+        let N = 2;
+        let result = " ";
+        while (count < numbers) {
+            let isPrime = true;
+            if (N < 2) {
+                isPrime = false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(N); i++) {
+                    if (N % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            if (isPrime) {
+                result += N + " ";
+                count++;
+            }
+            N++;
+        }
+        document.getElementById("isPrime").innerHTML = result;
+    }
+</script>
+</body>
+</html>

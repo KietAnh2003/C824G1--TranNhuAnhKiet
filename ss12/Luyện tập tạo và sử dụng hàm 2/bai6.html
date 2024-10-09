@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhập vào 1 số nguyên: ");
+    while (isNaN(number)) {
+        number = prompt("Nhập lại số nguyên hợp lệ: ");
+    }
+
+    function isInteger(a) {
+        if (!isNaN(a) && a > 0) {
+            a = parseInt(a);
+            return true;
+        } else
+            return false;
+    }
+
+    if (isInteger(number)) {
+        alert("True");
+    } else {
+        alert("False");
+    }
+
+</script>
+</body>
+</html>

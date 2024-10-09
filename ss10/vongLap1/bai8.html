@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Đoán Số</title>
+</head>
+
+<body>
+<button onclick="start()">Chơi</button>
+<script>
+    function start() {
+        let number = parseInt(prompt("Nhập số lớn nhất cho phạm vi đoán kể từ 0, bạn có 3 lần đoán"));
+        let numberRandom = Math.floor(Math.random() * number); // math.floor để làm tròn xuống số nguyên lớn nhất
+        let numberGuess = 0;                                   // math random( số thực từ 0-1) * number , sẽ chạy từ 0 - number
+        let count = 0;
+        let maxCount = 3;                                      // Biến đếm số lần đoán tối đa là 3
+        if (isNaN(number) || number <= 1) {
+            alert("Hãy nhập số hợp lệ và lớn hơn 1");
+        }
+        while (count < maxCount) {
+             numberGuess = parseInt(prompt("Nhập số bạn đoán từ 0 đến số đó trừ nó :"));
+            if (isNaN(numberGuess)) {
+                alert("Vui lòng nhập một số hợp lệ.");
+                continue;                                          // nếu NG là chữ.bỏ qua lệnh if phía dưới để quay lại vòng lặp while nếu Num không phải số
+            }
+            if (numberGuess === numberRandom) {
+                alert("Chúc mừng! Bạn đã đoán đúng số đó là: " + numberRandom);
+                break;
+            } else if (numberGuess < numberRandom) {
+                alert("Số bạn đoán sai! Hãy thử nhập số lớn hơn");
+            } else {
+                alert("Số bạn đoán sai! Hãy thử nhập số bé hơn");
+            }
+            count++;                                                      // đến khi count = 3 , while sẽ kết thúc và đến lệnh dưới
+        }
+        if (numberGuess !== numberRandom) {
+            alert("Bạn đã hết số lần đoán. Số đúng là: " + numberRandom);
+        }
+    }
+</script>
+</body>
+</html>

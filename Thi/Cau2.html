@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số lượng ký tự in hoa có trong chuỗi ký tự</title>
+</head>
+<body>
+<script>
+    let char = prompt("Hãy nhập vào chuỗi các ký tự:");
+
+    function countUppercase(string) {
+        let count = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] === string[i].toUpperCase() && string[i] !== string[i].toLowerCase()) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else {
+            return "The String is not contain any upper char";
+        }
+    }
+
+    let result = countUppercase(char);
+    alert(result);
+</script>
+</body>
+</html>

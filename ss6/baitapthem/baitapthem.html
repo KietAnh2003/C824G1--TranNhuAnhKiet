@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính trung bình</title>
+</head>
+<body>
+<h2>Tính trung bình</h2>
+<input type="number" name="toan" id="toan" placeholder="Nhập điểm toán"> <br> <br>
+<input type="number" name="hoa" id="hoa" placeholder="Nhập điểm hóa"> <br> <br>
+<input type="number" name="ly" id="ly" placeholder="Nhập điểm lý"> <br> <br>
+<button type="button" onclick="tinhtb()">Tính trung bình</button>
+<h4 id="result"></h4>
+
+<script>
+  function tinhtb() {
+    let dToan = parseFloat(document.getElementById("toan").value);
+    let dHoa = parseFloat(document.getElementById("hoa").value);
+    let dLy = parseFloat(document.getElementById("ly").value);
+    let avg = (dToan + dHoa + dLy)/3;
+    document.getElementById("result").innerText="Điểm trung bình:"+ avg.toFixed(1);}
+</script>
+</body>
+</html>

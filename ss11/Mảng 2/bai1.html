@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<h2> In ra các phần tử trong mảng 2 chiều</h2>
+<button onclick="display()"> Hiển thị phần tử</button>
+<div id="number"></div>
+<script>
+    function display() {
+        let array = [[1, 2, 3, 'a'], [4, 5, 6, 'b'], [7, 8, 9, 'c']];
+        let result = "";
+        for (let i = 0; i < array.length; i++) {
+            result += "array" + "[" + i + "]" + ": ";
+            for (let j = 0; j < array[i].length; j++) {
+                result = result + array[i][j] + " ";
+            }
+            result += "<br>";
+        }
+        document.getElementById("number").innerHTML = result;
+    }
+</script>
+</body>
+</html>

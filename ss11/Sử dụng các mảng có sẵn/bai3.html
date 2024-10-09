@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chữ thường thành chữ hoa, hoa thành thường</title>
+</head>
+<body>
+<label for="string">Nhập chuỗi ký tự: </label>
+<input type="text" id="string" placeholder="Nhập vào chuỗi">
+<button onclick="change()">Chuyển đổi</button>
+<p>Kết quả: <span id="result"></span></p>
+
+<script>
+    function change() {
+        let string = document.getElementById("string").value;
+        let result = "";
+        for (let i = 0; i < string.length; i++) {
+            let char = string[i];
+            if (char === char.toLowerCase()) {
+                result += char.toUpperCase();
+            } else {
+                result += char.toLowerCase();
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>

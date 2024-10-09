@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonacci</title>
+</head>
+<body>
+
+<h1>Tổng 20 số Fibonacci đầu tiên</h1>
+<button onclick="taoFibonacci()" id="hienThi">Hiển thị 20 số Fibonacci và Tổng</button>
+<div id="dayFibonacci"></div>
+<div id="tongFibonacci"></div>
+
+<script>
+    function taoFibonacci() {
+        let fibo ;
+        let fibo0 = 0;
+        let fibo1 = 1;
+        let fibonacci = fibo0 + ", " + fibo1;
+        let tongFibonacci = 0;
+
+        for (let i = 2; i < 20; i++){
+            fibo = fibo0 + fibo1;
+            fibo0 = fibo1;
+            fibo1 = fibo;
+            fibonacci +=  ", " + fibo;
+            tongFibonacci += fibo ;
+        }
+        document.getElementById("dayFibonacci").innerHTML= fibonacci;
+        document.getElementById("tongFibonacci").innerHTML=  " Tổng các số trên là : " + tongFibonacci;
+    }
+</script>
+</body>
+</html>

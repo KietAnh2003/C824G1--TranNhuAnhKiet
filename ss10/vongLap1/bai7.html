@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FizzBuzz</title>
+</head>
+<body>
+<h1>In ra các số từ 1 đến 100 cùng Fizz Buzz</h1>
+<button onclick="numberSeries()" id="display">Hiển thị </button>
+<div id="numberNatural"></div>
+
+<script>
+  function numberSeries() {
+    document.getElementById("numberNatural").innerHTML +=  "  ";
+    for (let i = 1; i <= 100; i++) {
+     if (i % 3 === 0 && i % 5 === 0) {
+       document.getElementById("numberNatural").innerHTML += 'FizzBuzz' + " , ";
+     } else if (i % 3 === 0) {
+       document.getElementById("numberNatural").innerHTML += 'Fizz' + " , ";
+     } else if (i % 5 === 0) {
+       document.getElementById("numberNatural").innerHTML += 'Buzz' + " , ";
+     } else {
+       document.getElementById("numberNatural").innerHTML += i + " , "
+     }
+    }
+  }
+</script>
+</body>
+</html>

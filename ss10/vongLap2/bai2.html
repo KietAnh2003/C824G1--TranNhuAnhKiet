@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của 1 số nguyên dương</title>
+</head>
+<body>
+<script>
+    let number;
+        do {
+            number = parseInt(prompt(" Nhập vào số nguyên dương n để tính giai thừa: n!"))
+        }
+        while (isNaN(number));
+        if (number < 0) {
+            alert("Không tồn tại giai thừa số âm!")
+        } else if (number === 0) {
+            number = 1;
+            alert(" Giai thừa của số 0, 0! mặc định là: " + number)
+        } else {
+           let factorial = 1;
+           for ( let i = 1; i <= number; i++ ) {
+               factorial = factorial * i;
+           }
+        alert("Giai thừa bằng: " + factorial)
+    }
+</script>
+</body>
+</html>

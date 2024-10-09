@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+<label>Width  :</label>
+<input type="text" id = "width" placeholder="nhập chiều rộng"> <br>
+<label>Height:</label>
+<input type="text" id = "height" placeholder="nhập chiều dài"><br>
+<button onclick="display()">Dispay</button>
+<p id="acreage" >Acreage</p>
+<p id="perimeter" >Perimeter</p>
+<canvas id="Canvas" width="500" height="600"></canvas>
+
+<script>
+
+    class Rectangle {
+        width;
+        height;
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        calculateAcreage() {
+            return  this.width * this.height;        // tính diện tích
+        }
+        calculatePerimeter() {
+            return ( this.width + this.height ) * 2;   //tính chu vi
+        }
+        getCanvas() {
+            let myCanvas = document.getElementById("Canvas");
+            let ctx = myCanvas.getContext("2d");
+            ctx.fillStyle='#fa4b2a';
+            ctx.fillRect(10, 10, this.width, this.height);
+        }
+    }
+    function display () {
+        let width = parseFloat(document.getElementById("width").value);
+        if (isNaN(width) || width < 0) {
+            alert("Hãy nhập lại width hợp lí")
+            return;
+        }
+        let height = parseFloat(document.getElementById("height").value);
+        if (isNaN(height) || height < 0) {
+            alert("Hãy nhập lại height dài hợp lí")
+            return;
+        }
+        let newRetangcle = new Rectangle(width, height);
+        document.getElementById("acreage").innerHTML = " Acreage = " + newRetangcle.calculateAcreage();
+        document.getElementById("perimeter").innerHTML = " Perimeter = " + newRetangcle.calculatePerimeter();
+        newRetangcle.getCanvas();
+    }
+</script>
+</body>
+</html>
