@@ -49,7 +49,7 @@ public class SumColum {
                     }
                 }
             }
-        }// in mảng 2 chiều
+        }
         System.out.println("Arrays is: " + Arrays.deepToString(array) );
         // tính tổng của cột
         System.out.print("Enter the column to calculate the total (0 -> 4): ");

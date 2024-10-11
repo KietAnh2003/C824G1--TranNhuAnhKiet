@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class FindMaxInArrs {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        // nhập hàng
         int rows;
         System.out.println("Enter the number of rows in array (number is integer and greater than 0): ");
         while (true) {
@@ -21,7 +21,7 @@ public class FindMaxInArrs {
                 System.out.println("Invalid value! Please enter a valid number.");
             }
         }
-
+        //nhập cột
         int columns;
         System.out.println("Enter the number of columns in array (greater than 0): ");
         while (true) {
@@ -36,9 +36,8 @@ public class FindMaxInArrs {
                 System.out.println("Invalid value! Please enter a valid number.");
             }
         }
-
+        // nhập phần tử mảng
         int[][] arr = new int[rows][columns];
-
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 while (true) {
@@ -52,7 +51,7 @@ public class FindMaxInArrs {
                 }
             }
         }
-
+        // tìm max
         int max = arr[0][0];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
