@@ -21,7 +21,7 @@ public class DisplayPrime {
                 currentNumber++;
             }
         } catch(Exception ex){
-            System.out.println("Ngoại lệ! Hãy nhập một số hợp lệ");
+            System.out.println("Giá trị không hợp lệ");
         }
     }
     public static boolean isPrime(int number) {
