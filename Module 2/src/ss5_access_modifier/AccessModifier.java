@@ -1,5 +1,5 @@
-package ss5_AccesModifier;
+package ss5_access_modifier;
 
 public class AccessModifier {
-    
+
 }

@@ -1,4 +1,4 @@
-package ss4_ClassObj;
+package ss4_class_obj;
 
 public class Fan {
     public static void main(String[] args) {
