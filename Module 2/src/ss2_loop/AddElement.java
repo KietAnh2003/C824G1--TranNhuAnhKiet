@@ -19,11 +19,13 @@ public class AddElement {
                 System.out.println("Vị trí không hợp lệ!");
                 return;
             }
-            for (int j : arr) {
-                if ( j == index) {
-                    arr1[j] = element;
-                }else {
-                    arr1[j] = arr[j];
+            int j = 0;
+            for (int i = 0; i < arr1.length; i++) {
+                if (i == index) {
+                    arr1[i] = element;
+                } else {
+                    arr1[i] = arr[j];
+                    j++;
                 }
             }
             System.out.println("Mảng khi đã thêm phần tử " + element + " là " + Arrays.toString(arr1));

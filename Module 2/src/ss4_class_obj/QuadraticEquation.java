@@ -2,7 +2,6 @@ package ss4_class_obj;
 import java.util.Scanner;
 
 public class QuadraticEquation {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double a = getInput(sc, "Enter value for a:");
@@ -20,6 +19,7 @@ public class QuadraticEquation {
             System.out.println("The equation has no roots.");
         }
     }
+
     // Nhập xử lí ngoại lệ
     public static double getInput(Scanner sc, String message) {
         double input = 0;
