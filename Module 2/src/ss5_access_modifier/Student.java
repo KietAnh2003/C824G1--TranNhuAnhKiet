@@ -11,12 +11,6 @@ public class Student {
     public void setClasses(String classes){
         this.classes = classes;
     }
-    public String getName(){
-        return name;
-    }
-    public String getClasses(){
-        return classes;
-    }
 }
 class Test{
     public static void main(String[] args) {
@@ -24,8 +18,5 @@ class Test{
 
         student.setName("Kiet");
         student.setClasses("C04");
-
-        System.out.println("Name: " + student.getName());
-        System.out.println("Classes: " + student.getClasses());
     }
 }
