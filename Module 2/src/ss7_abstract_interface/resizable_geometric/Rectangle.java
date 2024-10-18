@@ -1,45 +1,52 @@
 package ss7_abstract_interface.resizable_geometric;
 
 public class Rectangle extends Shape {
-    private double width = 1.0;
-    private double length = 1.0;
+        private double width = 1.0;
+        private double length = 1.0;
 
-    public Rectangle() {
-    }
+        public Rectangle() {}
 
-    public Rectangle(double width, double length) {
-        this.width = width;
+        public Rectangle(double width, double length) {
+            this.width = width;
+            this.length = length;
+        }
+
+        public Rectangle(double width, double length, String color, boolean filled) {
+            super(color, filled);
+            this.width = width;
+            this.length = length;
+        }
+
+        public double getWidth() {
+            return width;
+        }
+
+        public void setWidth(double width) {
+            this.width = width;
+        }
+
+        public double getLength() {
+            return length;
+        }
+
+        public void setLength(double length) {
         this.length = length;
     }
 
-    public Rectangle(double width, double length, String color, boolean filled) {
-        super(color, filled);
-        this.width = width;
-        this.length = length;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
-
+    @Override
     public double getArea() {
-        return width * this.length;
+        return width * length;
     }
 
+    @Override
     public double getPerimeter() {
-        return 2 * (width + this.length);
+        return 2 * (width + length);
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.width += this.width * percent / 100;
+        this.length += this.length * percent / 100;
     }
 
     @Override
@@ -51,5 +58,4 @@ public class Rectangle extends Shape {
                 + ", which is a subclass of "
                 + super.toString();
     }
-
 }

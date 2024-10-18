@@ -3,8 +3,7 @@ package ss7_abstract_interface.colorable_geometric;
 public class Circle extends Shape {
     private double radius = 1.0;
 
-    public Circle() {
-    }
+    public Circle() {}
 
     public Circle(double radius) {
         this.radius = radius;
@@ -35,7 +34,6 @@ public class Circle extends Shape {
     public String toString() {
         return "A Circle with radius="
                 + getRadius()
-                + ", area= " + getArea()
                 + ", which is a subclass of "
                 + super.toString();
     }
@@ -44,4 +42,5 @@ public class Circle extends Shape {
     public void resize(double percent) {
         this.radius += percent;
     }
+
 }

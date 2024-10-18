@@ -1,11 +1,10 @@
 package ss7_abstract_interface.resizable_geometric;
 
-public abstract class Shape{
+public abstract class Shape {
     private String color = "green";
     private boolean filled = true;
 
-    public Shape() {
-    }
+    public Shape() {}
 
     public Shape(String color, boolean filled) {
         this.color = color;
@@ -35,4 +34,8 @@ public abstract class Shape{
                 + " and "
                 + (isFilled() ? "filled" : "not filled");
     }
+
+    public abstract double getArea();
+    public abstract double getPerimeter();
+    public abstract void resize(double percent);
 }
