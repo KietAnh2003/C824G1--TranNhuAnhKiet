@@ -12,7 +12,7 @@ public class Student {
         this.classes = classes;
     }
 }
-class Test{
+class  mTest{
     public static void main(String[] args) {
         Student student = new Student();
 

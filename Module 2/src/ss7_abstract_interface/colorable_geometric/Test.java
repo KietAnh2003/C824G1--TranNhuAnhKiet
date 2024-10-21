@@ -18,7 +18,7 @@ public class Test {
             shape.resize(randomPercent);
 
             System.out.println("Resized by " + randomPercent + "%");
-            System.out.println("New Area: " + shape.getArea());
+            System.out.println("New Area: " + shape.getArea());;
             System.out.println();
         }
     }
