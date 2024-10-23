@@ -1,4 +1,4 @@
-package ss11_stack_queue.stack_integer;
+package ss11_stack_queue.stack_string;
 
 import java.util.Scanner;
 import java.util.Stack;
