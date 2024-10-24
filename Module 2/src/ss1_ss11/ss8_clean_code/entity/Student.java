@@ -1,6 +1,6 @@
 package ss1_ss11.ss8_clean_code.entity;
 
-public class Student extends Person{
+public class    Student extends Person{
     private double point;
     private String className;
     public Student(){

@@ -8,17 +8,23 @@ public class ReverseArrayInteger {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         try {
-            //Nhập phần tử
+            //Nhập phần tử, lớn hơn 0 và nhỏ hơn MAX của kiểu Integer
             System.out.println("Hãy nhập số lượng phần tử:");
             int numberOfElement = sc.nextInt();
+            //Điều kiện nhập
+            if (numberOfElement <= 0 || numberOfElement >= Integer.MAX_VALUE) {
+                System.out.println("Số lượng phần tử phải là số nguyen dương và nhỏ hơn " + Integer.MAX_VALUE);
+                return;
+            }
+
             int[] array = new int[numberOfElement];
             for (int i = 0; i < array.length; i++) {
                 System.out.print("Nhập phần tử thứ " + (i + 1) + ": ");
                 int numbers = sc.nextInt();
                 array[i] = numbers;
-
             }
             System.out.println("Mảng đã nhập là: " + Arrays.toString(array));
+
             // Đảo ngược mảng bằng stack
             Stack<Integer> stack = new Stack<>();
 
