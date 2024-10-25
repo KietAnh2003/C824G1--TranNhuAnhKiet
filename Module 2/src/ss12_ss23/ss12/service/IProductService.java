@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IProductService {
     void addProduct(Product product);
-    void updateProductById(int id, String newName, double newPrice);
+    boolean updateProductById(int id, String newName, double newPrice);
     void removeProductById(int id);
     List<Product> displayProducts();
     List<Product> searchProductByName(String name);

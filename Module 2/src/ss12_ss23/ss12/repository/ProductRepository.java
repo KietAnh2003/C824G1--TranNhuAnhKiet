@@ -11,15 +11,16 @@ public class ProductRepository {
     public void addProduct(Product product) {
         productList.add(product);
     }
-
-    public void removeProductById(int id) {
+    // thêm điều kiện nếu không tìm thấy id thì false
+    public boolean removeProductById(int id) {
         for (int i = 0; i < productList.size(); i++) {
             Product product = productList.get(i);
             if (product.getId() == id) {
                 productList.remove(i);
-                break;
+                return true;
             }
         }
+        return false;
     }
 
     public Product getProductById(int id) {

@@ -16,12 +16,15 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void updateProductById(int id, String newName, double newPrice) {
+    //sửa kiểu void boolean để trả về true false khi sửa
+    public boolean updateProductById(int id, String newName, double newPrice) {
         Product product = productRepository.getProductById(id);
         if (product != null) {
             product.setName(newName);
             product.setPrice(newPrice);
+            return true;
         }
+        return false;
     }
 
     @Override

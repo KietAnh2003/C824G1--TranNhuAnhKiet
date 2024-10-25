@@ -44,8 +44,11 @@ public class Main {
                 case 2:
                     System.out.print("Nhập ID sản phẩm cần xóa: ");
                     id = scanner.nextInt();
-                    manager.removeProductById(id);
+                    if (!manager.removeProductById(id)) {
+                        System.out.println("Không tìm thấy sản phẩm với ID: " + id);
+                    }
                     break;
+
                 case 3:
                     System.out.print("Nhập ID sản phẩm cần sửa: ");
                     id = scanner.nextInt();
@@ -55,6 +58,9 @@ public class Main {
                     System.out.print("Nhập giá mới: ");
                     price = scanner.nextDouble();
                     manager.updateProductById(id, name, price);
+                    if (!manager.updateProductById(id, name, price)) {
+                        System.out.println("Không tìm thấy sản phẩm với ID: " + id);
+                    }
                     break;
                 case 4:
                     List<Product> products = manager.displayProducts();

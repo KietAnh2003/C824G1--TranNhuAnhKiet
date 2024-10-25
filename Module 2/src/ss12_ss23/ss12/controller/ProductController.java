@@ -12,12 +12,16 @@ public class ProductController {
         productService.addProduct(product);
     }
 
-    public void updateProductById(int id, String newName, double newPrice) {
-        productService.updateProductById(id, newName, newPrice);
+    public boolean updateProductById(int id, String newName, double newPrice) {
+        if (!productService.updateProductById(id, newName, newPrice)) {
+            System.out.println("Không tìm thấy sản phẩm với ID: " + id);
+        }
+        return false;
     }
 
-    public void removeProductById(int id) {
+    public boolean removeProductById(int id) {
         productService.removeProductById(id);
+        return false;
     }
 
     public List<Product> displayProducts() {
