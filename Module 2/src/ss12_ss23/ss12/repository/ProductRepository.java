@@ -13,7 +13,13 @@ public class ProductRepository {
     }
 
     public void removeProductById(int id) {
-        productList.removeIf(product -> product.getId() == id);
+        for (int i = 0; i < productList.size(); i++) {
+            Product product = productList.get(i);
+            if (product.getId() == id) {
+                productList.remove(i);
+                break;
+            }
+        }
     }
 
     public Product getProductById(int id) {
