@@ -16,20 +16,19 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    //sửa kiểu void boolean để trả về true false khi sửa
     public boolean updateProductById(int id, String newName, double newPrice) {
         Product product = productRepository.getProductById(id);
         if (product != null) {
             product.setName(newName);
             product.setPrice(newPrice);
-            return true;
+            return true; // Trả về true nếu cập nhật thành công
         }
-        return false;
+        return false; // Trả về false nếu không tìm thấy
     }
 
     @Override
-    public void removeProductById(int id) {
-        productRepository.removeProductById(id);
+    public boolean removeProductById(int id) {
+        return productRepository.removeProductById(id); // Gọi hàm từ repository
     }
 
     @Override
@@ -52,22 +51,12 @@ public class ProductService implements IProductService {
     @Override
     public void sortProductsByPriceAscending() {
         List<Product> allProducts = productRepository.getAllProducts();
-        allProducts.sort(new Comparator<Product>() {
-            @Override
-            public int compare(Product p1, Product p2) {
-                return Double.compare(p1.getPrice(), p2.getPrice());
-            }
-        });
+        allProducts.sort(Comparator.comparingDouble(Product::getPrice)); // Sử dụng biểu thức lambda
     }
 
     @Override
     public void sortProductsByPriceDescending() {
         List<Product> allProducts = productRepository.getAllProducts();
-        allProducts.sort(new Comparator<Product>() {
-            @Override
-            public int compare(Product p1, Product p2) {
-                return Double.compare(p2.getPrice(), p1.getPrice());
-            }
-        });
+        allProducts.sort(Comparator.comparingDouble(Product::getPrice).reversed()); // Sử dụng biểu thức lambda
     }
 }

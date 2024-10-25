@@ -11,16 +11,17 @@ public class ProductRepository {
     public void addProduct(Product product) {
         productList.add(product);
     }
-    // thêm điều kiện nếu không tìm thấy id thì false
+
+    //Thêm điều kiện kiểm tra trước khi xóa
     public boolean removeProductById(int id) {
         for (int i = 0; i < productList.size(); i++) {
             Product product = productList.get(i);
             if (product.getId() == id) {
                 productList.remove(i);
-                return true;
+                return true; //true nếu xóa thành công
             }
         }
-        return false;
+        return false; //false nếu không tìm thấy
     }
 
     public Product getProductById(int id) {
@@ -29,7 +30,7 @@ public class ProductRepository {
                 return product;
             }
         }
-        return null;
+        return null; //null nếu không tìm thấy
     }
 
     public List<Product> getAllProducts() {

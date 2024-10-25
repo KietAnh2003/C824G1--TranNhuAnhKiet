@@ -32,14 +32,17 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Nhập ID sản phẩm: ");
-                    id = scanner.nextInt();
-                    scanner.nextLine();
-                    System.out.print("Nhập tên sản phẩm: ");
-                    name = scanner.nextLine();
-                    System.out.print("Nhập giá sản phẩm: ");
-                    price = scanner.nextDouble();
-                    manager.addProduct(new Product(id, name, price));
+                    try {
+                        System.out.print("Nhập ID sản phẩm: ");
+                        id = Integer.parseInt(scanner.nextLine());
+                        System.out.print("Nhập tên sản phẩm: ");
+                        name = scanner.nextLine();
+                        System.out.print("Nhập giá sản phẩm: ");
+                        price = Double.parseDouble(scanner.nextLine());
+                        manager.addProduct(new Product(id, name, price));
+                    } catch (NumberFormatException e) {
+                        System.out.println("ID và giá phải là số hợp lệ.");
+                    }
                     break;
                 case 2:
                     System.out.print("Nhập ID sản phẩm cần xóa: ");
@@ -50,16 +53,19 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.print("Nhập ID sản phẩm cần sửa: ");
-                    id = scanner.nextInt();
-                    scanner.nextLine(); // Xóa bộ đệm
-                    System.out.print("Nhập tên mới: ");
-                    name = scanner.nextLine();
-                    System.out.print("Nhập giá mới: ");
-                    price = scanner.nextDouble();
-                    manager.updateProductById(id, name, price);
-                    if (!manager.updateProductById(id, name, price)) {
-                        System.out.println("Không tìm thấy sản phẩm với ID: " + id);
+                    try {
+                        System.out.print("Nhập ID sản phẩm cần sửa: ");
+                        id = scanner.nextInt();
+                        scanner.nextLine();
+                        System.out.print("Nhập tên mới: ");
+                        name = scanner.nextLine();
+                        System.out.print("Nhập giá mới: ");
+                        price = Double.parseDouble(scanner.nextLine());
+                        if (!manager.updateProductById(id, name, price)) {
+                            System.out.println("Không tìm thấy sản phẩm với ID: " + id);
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("ID và giá phải là số hợp lệ.");
                     }
                     break;
                 case 4:

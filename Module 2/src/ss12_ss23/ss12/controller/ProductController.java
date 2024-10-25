@@ -5,13 +5,13 @@ import ss12_ss23.ss12.service.IProductService;
 import ss12_ss23.ss12.service.ProductService;
 import java.util.List;
 
-public class ProductController {
+public class    ProductController {
     private IProductService productService = new ProductService();
 
     public void addProduct(Product product) {
         productService.addProduct(product);
     }
-
+    // thêm điều kiện khi không tìm thấy phần tử để sửa đôi
     public boolean updateProductById(int id, String newName, double newPrice) {
         if (!productService.updateProductById(id, newName, newPrice)) {
             System.out.println("Không tìm thấy sản phẩm với ID: " + id);
