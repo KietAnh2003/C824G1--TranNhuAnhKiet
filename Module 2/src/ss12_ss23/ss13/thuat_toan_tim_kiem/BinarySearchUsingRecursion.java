@@ -5,8 +5,10 @@ import java.util.Scanner;
 
 public class BinarySearchUsingRecursion {
     public static void main(String[] args) {
+
         int[] arr = new int[5];
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Mảng khởi tạo có 5 phần tử, hãy nhập số nguyên hợp lệ.");
         //nhập phần tử
         for (int i = 0; i < arr.length; i++) {
