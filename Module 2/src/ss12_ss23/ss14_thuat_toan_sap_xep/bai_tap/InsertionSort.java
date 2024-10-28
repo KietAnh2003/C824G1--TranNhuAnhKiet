@@ -12,13 +12,16 @@ public class InsertionSort {
         try {
             System.out.print("Enter the size of the array: ");
             size = sc.nextInt();
+            if(size <= 0) {
+                System.out.println("Size must be a number greater than 0");
+                return;
+            }
             list = new int[size];
 
             for (int i = 0; i < size; i++) {
                 System.out.print("Please enter the element " + (i + 1) + " : ");
                 list[i] = sc.nextInt();
             }
-
         } catch (Exception e) {
             System.out.println("Invalid value");
             return;
@@ -33,25 +36,25 @@ public class InsertionSort {
         printArray(list);
     }
 
-    public static void insertionSort(int[] array) {
+    public static void insertionSort(int[] list) {
         int index;
         int value;
-        for (int i = 1; i < array.length; i++) {
-            value = array[i];
+        for (int i = 1; i < list.length; i++) {
+            value = list[i];
             index = i;
-            while (index > 0 && value < array[index - 1]) {
-                array[index] = array[index - 1];
+            while (index > 0 && value < list[index - 1]) {
+                list[index] = list[index - 1];
                 index--;
             }
-            array[index] = value;
+            list[index] = value;
 
             System.out.print("After insert " + value + ": ");
-            printArray(array);
+            printArray(list);
         }
     }
 
-    public static void printArray(int[] array) {
-        for (int value : array) {
+    public static void printArray(int[] list) {
+        for (int value : list) {
             System.out.print(value + " ");
         }
         System.out.println();
