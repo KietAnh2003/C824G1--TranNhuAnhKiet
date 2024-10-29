@@ -39,7 +39,13 @@ public abstract class Person {
     }
     public int hashcode(){ return Objects.hash(code, name);}
 
-    public String toString(){
-        return " Person{" + "id=" + code + ", name" + name + ", address" + address + "}";
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + code +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
+
 }
