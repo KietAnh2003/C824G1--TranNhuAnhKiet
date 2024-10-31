@@ -19,41 +19,37 @@ public class StudentService implements IStudentService {
     }
 
     public List<Student> addStudent() {
-        Scanner scanner = new Scanner(System.in);
-        int id = 0;
-        String name = null;
-        String address = null;
-        double point = 0;
-        String className = null;
-        try {
-            System.out.print("Nhập ID: ");
-            id = Integer.parseInt(scanner.nextLine());
-            System.out.print("Nhập tên: ");
-            name = scanner.nextLine();
+         StudentRepository studentRepository = new StudentRepository();
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Nhập mã ID học sinh: ");
+            int id = Integer.parseInt(scanner.nextLine());
+
+            System.out.print("Nhập tên học sinh: ");
+            String name = scanner.nextLine();
+
             System.out.print("Nhập địa chỉ: ");
-            address = scanner.nextLine();
+            String address = scanner.nextLine();
+
             System.out.print("Nhập điểm: ");
-            point = Double.parseDouble(scanner.nextLine());
+            double point = Double.parseDouble(scanner.nextLine());
+
             System.out.print("Nhập tên lớp: ");
-            className = scanner.nextLine();
-        }catch(Exception e){
-            System.out.println("Invalid");
+            String className = scanner.nextLine();
+
+            Student student = new Student(id, name, address, point, className);
+
+            studentRepository.addStudent(student);
+            return studentRepository.getAll();
         }
-
-        Student student = new Student((int) id, name, address, point, className);
-
-        studentRepository.addStudent(student);
-
-        return studentRepository.getAll();
-    }
     public boolean editStudentByCode(long code, String name, String address, double point, String className) {
         return studentRepository.editStudentByCode(code, name, address, point, className);
     }
 
     public Student getStudentByCode(long code) {
-        return studentRepository.getStudentByCode(code); // Cần thêm phương thức này trong repository
+        return studentRepository.getStudentByCode(code);
     }
-
 
 
 

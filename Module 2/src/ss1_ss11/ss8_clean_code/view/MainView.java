@@ -8,7 +8,8 @@ import ss1_ss11.ss8_clean_code.entity.Student;
 import java.util.List;
 import java.util.Scanner;
 
-public class MainView {
+public class
+        MainView {
     public static void main(String[] args) {
         while (true) {
             System.out.println("--------- Quản lý CodeGym ------------");
@@ -56,8 +57,11 @@ public class MainView {
                         }
                         break;
                     case 2:
-                        System.out.println("Thêm mới học sinh");
-                        studentController.addStudent();
+                        List<Student> updatedStudents = studentController.addStudent();
+                        System.out.println("Danh sách học sinh sau khi thêm:");
+                        for (Student student : updatedStudents) {
+                            System.out.println(student);
+                        }
                         break;
                     case 3:
                         while (true) {

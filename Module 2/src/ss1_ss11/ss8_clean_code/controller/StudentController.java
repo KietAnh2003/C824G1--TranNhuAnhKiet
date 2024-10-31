@@ -10,21 +10,18 @@ public class StudentController {
     private static IStudentService studentService = new StudentService();
 
     public List<Student> getAll() {
-        List<Student> students = studentService.getAll();
-        return students;
+        return studentService.getAll();
     }
     public List<Student> addStudent() {
-        List<Student> students = studentService.addStudent();
-        return students;
+        return studentService.addStudent();
     }
 
-    public boolean editStudentByCode(long code, String name, String address, double point, String nameClass) {
-        return studentService.editStudentByCode(code, name, address, point, nameClass);
+    public boolean editStudentByCode(long id, String name, String address, double point, String nameClass) {
+        return studentService.editStudentByCode(id, name, address, point, nameClass);
     }
     public Student getStudentByCode(long code) {
-        return studentService.getStudentByCode(code); // Cần thêm phương thức này trong service
+        return studentService.getStudentByCode(code);
     }
-
 
 
     public List<Student> displayAllStudentSortById() {
