@@ -7,13 +7,16 @@ import java.util.regex.Pattern;
 public class ClassName{
     private static final String CLASS_NAME_REGEX = "^[CAP][0-9]{4}[GHIK]$";
     private static Pattern pattern = Pattern.compile(CLASS_NAME_REGEX);
+
     public static boolean validate(String className) {
-        boolean result = false;
+//        boolean result = false;
+//        Matcher matcher = pattern.matcher(className);
+//        if (matcher.matches()) {
+//            result = true;
+//        }
+//        return result;
         Matcher matcher = pattern.matcher(className);
-        if (matcher.matches()) {
-            result = true;
-        }
-        return result;
+        return matcher.matches();
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
