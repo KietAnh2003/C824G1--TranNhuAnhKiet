@@ -11,6 +11,7 @@ public class ProductService implements IProductService {
     public void addProduct(Product product) {
         productRepository.addProduct(product);
     }
+
     public List<Product> getAllProduct() {
         return productRepository.getAllProduct();
     }
