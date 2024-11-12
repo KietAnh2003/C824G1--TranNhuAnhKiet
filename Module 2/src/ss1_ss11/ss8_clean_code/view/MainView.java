@@ -8,8 +8,7 @@ import ss1_ss11.ss8_clean_code.entity.Student;
 import java.util.List;
 import java.util.Scanner;
 
-public class
-        MainView {
+public class MainView {
     public static void main(String[] args) {
         while (true) {
             System.out.println("--------- Quản lý CodeGym ------------");
