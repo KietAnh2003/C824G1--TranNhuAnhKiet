@@ -124,7 +124,7 @@ INSERT INTO nhan_vien (id_nhan_vien, ho_ten, id_vi_tri, id_trinh_do, id_bo_phan,
 (1, 'Nguyễn Văn A', 1, 1, 1, '1990-01-01', '123456789', '0912345678', 'nva@example.com', 'Hà Nội'),
 (2, 'Trần Thị B', 2, 2, 2, '1992-03-15', '987654321', '0987654321', 'ttb@example.com', 'Đà Nẵng'),
 (3, 'Phạm Văn C', 3, 3, 3, '1985-07-22', '555555555', '0966666666', 'pvc@example.com', 'TP HCM'),
-(4, 'Lê Thị D', 4, 4, 4, '1998-11-11', '444444444', '0944444444', 'ltd@example.com', 'Hải Phòng'),
+(4, 'Lê Thị D', 4, 4, 4, '1998-11-11', '444444444', '0944444444', 'ltd@example.com', 'Quảng Trị'),
 (5, 'Hoàng Văn E', 5, 5, 5, '1995-06-10', '333333333', '0933333333', 'hve@example.com', 'Nha Trang');
 INSERT INTO loai_khach (id_loai_khach, ten_loaikhach) VALUES
 (1, 'Cá nhân'),
@@ -136,8 +136,8 @@ INSERT INTO khach_hang (id_khach_hang, id_loai_khach, ho_ten, ngay_sinh, so_cmtn
 (1, 1, 'Nguyễn Văn X', '1985-02-10', '123456789', '0911223344', 'nvx@example.com', 'Hà Nội'),
 (2, 2, 'Lê Thị Y', '1990-05-22', '987654321', '0933445566', 'lty@example.com', 'Đà Nẵng'),
 (3, 3, 'Phạm Minh Z', '1978-11-30', '456789123', '0966778899', 'pmz@example.com', 'TP Hồ Chí Minh'),
-(4, 4, 'Hoàng Gia K', '2000-09-15', '741852963', '0977223311', 'hgk@example.com', 'Hải Phòng'),
-(5, 5, 'Trần Thị M', '1995-03-08', '369258147', '0944556677', 'ttm@example.com', 'Nha Trang');
+(4, 4, 'Hoàng Gia K', '1990-05-22', '741852963', '0977223311', 'hgk@example.com', 'Quảng Trị'),
+(5, 5, 'Trần Thị M', '1995-03-08', '369258147', '0944556677', 'ttm@example.com', 'Đà Nẵng');
 INSERT INTO kieu_thue (id_kieu_thue, ten_kieu_thue, gia) VALUES
 (1, 'Thuê theo giờ', 50000),
 (2, 'Thuê theo ngày', 300000),
@@ -174,3 +174,13 @@ INSERT INTO hop_dong_chi_tiet (id_hop_dong_chi_tiet, id_hop_dong, id_dich_vu_di_
 (3, 3, 3, 4),
 (4, 4, 4, 1),
 (5, 5, 5, 2);
+SELECT * FROM nhan_vien
+WHERE ho_ten LIKE 'H%' 
+   OR ho_ten LIKE 'T%' 
+   OR ho_ten LIKE 'K%' 
+   AND LENGTH(ho_ten) <= 15;
+SELECT * FROM khach_hang
+WHERE CAST(ngay_sinh AS DATE) BETWEEN CURDATE() - INTERVAL 50 YEAR AND CURDATE() - INTERVAL 18 YEAR
+AND (dia_chi = 'Đà Nẵng' OR dia_chi = 'Quảng Trị');
+
+
