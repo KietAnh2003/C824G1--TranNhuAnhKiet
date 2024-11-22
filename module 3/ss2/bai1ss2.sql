@@ -1,57 +1,74 @@
-create database bai1ss2;
-use bai1ss2;
+CREATE DATABASE IF NOT EXISTS bai1ss2;
+USE bai1ss2;
 
-create table phieu_xuat(
-    so_phieu_xuat int primary key,
-    ngay_xuat date
-);
-create table vat_tu(
-    ma_vat_tu int primary key,
-    ten_vat_tu varchar(100)
-);
-create table phieu_nhap(
-    so_phieu_nhap int primary key,
-    ngay_nhap date
-);
-create table nha_cung_cap (
-    ma_nha_cung_cap int primary key,
-    ten_nha_cung_cap varchar(100),
-    dia_chi varchar(100)
-);
-create table don_dat_hang(
-    so_dat_hang int primary key,
-    ngay_dat_hang date,
-    ma_nha_cung_cap int,
-    foreign key (ma_nha_cung_cap) references nha_cung_cap(ma_nha_cung_cap)
-);
-create table phieu_xuat_vat_tu(
-    so_phieu_xuat int,
-    ma_vat_tu int,
-    don_gia_xuat decimal(10, 2),
-    so_luong_xuat int,
-    primary key (so_phieu_xuat, ma_vat_tu),
-    foreign key (so_phieu_xuat) references phieu_xuat(so_phieu_xuat),
-    foreign key (ma_vat_tu) references vat_tu(ma_vat_tu)
-);
-create table phieu_nhap_vat_tu(
-    so_phieu_nhap int,
-    ma_vat_tu int,
-    don_gia_nhap decimal(10, 2),
-    so_luong_nhap int,
-    primary key (so_phieu_nhap, ma_vat_tu),
-    foreign key (so_phieu_nhap) references phieu_nhap(so_phieu_nhap),
-    foreign key (ma_vat_tu) references vat_tu(ma_vat_tu)
-);
-create table don_dat_hang_vat_tu(
-    so_dat_hang int,
-    ma_vat_tu int,
-    primary key (so_dat_hang, ma_vat_tu),
-    foreign key (so_dat_hang) references don_dat_hang(so_dat_hang),
-    foreign key (ma_vat_tu) references vat_tu(ma_vat_tu)
-);
-create table so_dien_thoai_nha_cung_cap(
-    ma_nha_cung_cap int,
-    so_dien_thoai varchar(15),
-    primary key (ma_nha_cung_cap, so_dien_thoai),
-    foreign key (ma_nha_cung_cap) references nha_cung_cap(ma_nha_cung_cap)
-);
+-- Bảng nhà cung cấp
+CREATE TABLE nha_cung_cap (
+    ma_nha_cung_cap INT PRIMARY KEY,
+    ten_nha_cung_cap VARCHAR(100),
+    dia_chi VARCHAR(100)
+) ENGINE=InnoDB;
+
+-- Bảng đơn đặt hàng
+CREATE TABLE don_dat_hang (
+    so_dat_hang INT PRIMARY KEY,
+    ngay_dat_hang DATE,
+    ma_nha_cung_cap INT,
+    FOREIGN KEY (ma_nha_cung_cap) REFERENCES nha_cung_cap(ma_nha_cung_cap)
+) ENGINE=InnoDB;
+
+-- Bảng phiếu xuất
+CREATE TABLE phieu_xuat (
+    so_phieu_xuat INT PRIMARY KEY,
+    ngay_xuat DATE
+) ENGINE=InnoDB;
+
+-- Bảng vật tư
+CREATE TABLE vat_tu (
+    ma_vat_tu INT PRIMARY KEY,
+    ten_vat_tu VARCHAR(100)
+) ENGINE=InnoDB;
+
+-- Bảng phiếu nhập
+CREATE TABLE phieu_nhap (
+    so_phieu_nhap INT PRIMARY KEY,
+    ngay_nhap DATE
+) ENGINE=InnoDB;
+
+-- Bảng phiếu xuất - vật tư (liên kết phiếu xuất và vật tư)
+CREATE TABLE phieu_xuat_vat_tu (
+    so_phieu_xuat INT,
+    ma_vat_tu INT,
+    don_gia_xuat DECIMAL(10, 2),
+    so_luong_xuat INT,
+    PRIMARY KEY (so_phieu_xuat, ma_vat_tu),
+    FOREIGN KEY (so_phieu_xuat) REFERENCES phieu_xuat(so_phieu_xuat),
+    FOREIGN KEY (ma_vat_tu) REFERENCES vat_tu(ma_vat_tu)
+) ENGINE=InnoDB;
+
+-- Bảng phiếu nhập - vật tư (liên kết phiếu nhập và vật tư)
+CREATE TABLE phieu_nhap_vat_tu (
+    so_phieu_nhap INT,
+    ma_vat_tu INT,
+    don_gia_nhap DECIMAL(10, 2),
+    so_luong_nhap INT,
+    PRIMARY KEY (so_phieu_nhap, ma_vat_tu),
+    FOREIGN KEY (so_phieu_nhap) REFERENCES phieu_nhap(so_phieu_nhap),
+    FOREIGN KEY (ma_vat_tu) REFERENCES vat_tu(ma_vat_tu)
+) ENGINE=InnoDB;
+
+-- Bảng đơn đặt hàng - vật tư (liên kết đơn đặt hàng và vật tư)
+CREATE TABLE don_dat_hang_vat_tu (
+    so_dat_hang INT,
+    ma_vat_tu INT,
+    PRIMARY KEY (so_dat_hang, ma_vat_tu),
+    FOREIGN KEY (so_dat_hang) REFERENCES don_dat_hang(so_dat_hang),
+    FOREIGN KEY (ma_vat_tu) REFERENCES vat_tu(ma_vat_tu)
+) ENGINE=InnoDB;
+
+-- Bảng số điện thoại nhà cung cấp (liên kết nhiều số điện thoại cho một nhà cung cấp)
+CREATE TABLE so_dien_thoai_nha_cung_cap (
+    ma_nha_cung_cap INT,
+    so_dien_thoai VARCHAR(15),
+    PRIMARY KEY (ma_nha_cung_cap, so_dien_thoai),
+    FOREIGN KEY (ma_nha_cung_cap) REFERENCES nha_cung_cap(ma_nha_cung_cap)
+) ENGINE=InnoDB;
