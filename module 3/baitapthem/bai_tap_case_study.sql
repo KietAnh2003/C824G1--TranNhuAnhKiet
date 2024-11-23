@@ -202,11 +202,13 @@ order by so_lan_dat_phong asc;
 -- câu 5: hiển thị thông tin khách hàng đã từng đặt phòng, bao gồm tổng tiền (chi phí thuê + số lượng * giá dịch vụ)
 select 
     kh.id_khach_hang, 
-	kh.ho_ten, lk.ten_loai_khach, 
-	hd.id_hop_dong, 
-	dv.ten_dich_vu, 
-	hd.ngay_lam_hop_dong, 
-	hd.ngay_ket_thuc, ifnull(dv.chi_phi_thue + (dvk.so_luong * dvk.gia), 0) as tong_tien
+    kh.ho_ten, 
+    lk.ten_loai_khach, 
+    hd.id_hop_dong, 
+    dv.ten_dich_vu, 
+    hd.ngay_lam_hop_dong, 
+    hd.ngay_ket_thuc, 
+    (dv.chi_phi_thue + dvk.so_luong * dvk.gia) as tong_tien
 from khach_hang kh
 left join hop_dong hd on kh.id_khach_hang = hd.id_khach_hang
 left join dich_vu dv on hd.id_dich_vu = dv.id_dich_vu
