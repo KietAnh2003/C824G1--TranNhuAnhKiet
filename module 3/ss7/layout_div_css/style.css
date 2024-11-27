@@ -64,3 +64,26 @@ body {
     margin: 0;
     padding: 0;
 }
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Chuyển từ hàng ngang sang cột dọc */
+        overflow-y: auto;
+    }
+
+    .column {
+        margin-bottom: 15px; /* Tạo khoảng cách giữa các cột */
+    }
+
+    .images {
+        order: 3; /* Đẩy cột hình ảnh xuống dưới cùng */
+    }
+
+    .content {
+        order: 2; /* Giữ nội dung ở giữa */
+    }
+
+    .links {
+        order: 1; /* Đẩy cột link lên đầu */
+    }
+}
+

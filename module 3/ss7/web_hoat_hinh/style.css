@@ -94,3 +94,21 @@ iframe {
     bottom: 0;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .left-content, .right-content {
+        flex: none;
+        width: 100%;
+        margin: 0;
+    }
+    .video-container iframe {
+        height: 400px;
+    }
+    .video-suggestions {
+        margin-top: 20px;
+    }
+}
+
