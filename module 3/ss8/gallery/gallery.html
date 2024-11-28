@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      color: black;
+      background-color: white;
+    }
+    h1, h3 {
+      margin: 20px 0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px ;
+
+    }
+    .gallery-item {
+      flex: 23%;
+      border: 1px solid black;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .gallery-item .desc {
+      margin-top: 5px;
+      font-size: 14px;
+      color: black;
+    }
+    @media (max-width: 700px) {
+      .gallery-item {
+        flex:  48%;
+      }
+    }
+    @media (max-width: 500px) {
+      .gallery-item {
+        flex: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+<h3>Resize the browser window to see the effect</h3>
+
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="cuc_quang_1.jpg" alt="Image 1">
+    <div class="desc">Ảnh cực quang 1</div>
+  </div>
+  <div class="gallery-item">
+    <img src="cuc_quang_2.jpg" alt="Image 2">
+    <div class="desc">Ảnh cực quang 2</div>
+  </div>
+  <div class="gallery-item">
+    <img src="cuc_quang_3.jpg" alt="Image 3">
+    <div class="desc">Ảnh cực quang 3</div>
+  </div>
+  <div class="gallery-item">
+    <img src="cuc_quang_4.jpg" alt="Image 4">
+    <div class="desc">Ảnh cực quang 4</div>
+  </div>
+</div>
+</body>
+</html>
