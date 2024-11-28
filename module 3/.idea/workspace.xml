@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64e04011-f01e-4a5e-9424-907cba48aefc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/module 3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module 3.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss7/layout_div_css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss7/layout_div_css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss7/layout_div_css/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss7/layout_div_css/welcome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss7/web_hoat_hinh/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss7/web_hoat_hinh/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +40,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CodeGym/C824G1--TranNhuAnhKiet/module 3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CodeGym/C824G1--TranNhuAnhKiet/module 3/ss8/landing_page&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -51,6 +49,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CodeGym\C824G1--TranNhuAnhKiet\module 3\ss8\landing_page" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CodeGym\C824G1--TranNhuAnhKiet\module 3\ss8\landing_page" />
+      <recent name="D:\CodeGym\C824G1--TranNhuAnhKiet\module 3\ss8\gallery" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,7 +75,8 @@
       <updated>1732517206815</updated>
       <workItem from="1732517207867" duration="11000" />
       <workItem from="1732606687522" duration="6743000" />
-      <workItem from="1732670164635" duration="3658000" />
+      <workItem from="1732670164635" duration="13719000" />
+      <workItem from="1732755905183" duration="2770000" />
     </task>
     <servers />
   </component>
