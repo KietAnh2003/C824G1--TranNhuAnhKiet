@@ -1,4 +1,4 @@
-package com.example.calculator.model;
+package com.example.calculator;
 
 public class Calculator {
 

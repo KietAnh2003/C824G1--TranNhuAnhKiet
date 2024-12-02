@@ -1,6 +1,4 @@
-package com.example.calculator.servlet;
-
-import com.example.calculator.model.Calculator;
+package com.example.calculator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +26,7 @@ public class CalculatorServlet extends HttpServlet {
         writer.println("</html>");
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     }
 }

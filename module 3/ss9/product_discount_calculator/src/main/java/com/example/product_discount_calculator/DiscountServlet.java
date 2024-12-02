@@ -13,7 +13,6 @@ public class DiscountServlet extends HttpServlet {
         String productDescription = request.getParameter("productDescription");
         double listPrice = Double.parseDouble(request.getParameter("listPrice"));
         double discountPercent = Double.parseDouble(request.getParameter("discountPercent"));
-
         double discountAmount = listPrice * discountPercent * 0.01;
         double discountPrice = listPrice - discountAmount;
 
