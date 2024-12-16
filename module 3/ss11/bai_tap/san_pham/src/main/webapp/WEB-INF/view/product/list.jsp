@@ -13,44 +13,30 @@
         <input type="text" name="query" placeholder="Search by name" class="form-control me-2" required/>
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
-    <button class="btn btn-success mb-3" type="button" onclick="window.location.href='/product?action=add'">Create New
-        Product
-    </button>
-    <table class="table table-striped">
-        <thead class="table-dark">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Description</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach var="product" items="${products}">
-            <tr>
-                <td>${product.idProduct}</td>
-                <td>${product.productName}</td>
-                <td>${product.price}</td>
-                <td>${product.description}</td>
-                <td style="width: 20%">
-                    <button class="btn btn-info btn-sm" data-bs-toggle="modal"
-                            data-bs-target="#viewModal${product.idProduct}">
-                        View
-                    </button>
-                    <button class="btn btn-warning btn-sm" onclick="window.location.href=
-                            '/product?action=update&idProduct=${product.idProduct}'">
-                        Edit
-                    </button>
-                    <button class="btn btn-danger btn-sm" onclick="window.location.href=
-                            '/product?action=remove&idProduct=${product.idProduct}'">
-                        Delete
-                    </button>
-                </td>
-            </tr>
+    <button class="btn btn-success mb-3" type="button" onclick="window.location.href='/product?action=add'">Create New Product</button>
 
-            <div class="modal fade" id="viewModal${product.idProduct}" tabindex="-1"
-                 aria-labelledby="viewModalLabel${product.idProduct}" aria-hidden="true">
+    <!-- Start of Card Grid -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <c:forEach var="product" items="${products}">
+            <div class="col">
+                <div class="card" style="width: 12rem;">
+                    <!-- Placeholder image or product image -->
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="${product.productName}">
+                    <div class="card-body p-2">
+                        <h5 class="card-title fs-6">${product.productName}</h5>
+                        <p class="card-text fs-7">${product.description}</p>
+                        <p class="card-text fs-6"><strong>Price:</strong> $${product.price}</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#viewModal${product.idProduct}">View</button>
+                        <button class="btn btn-warning btn-sm" onclick="window.location.href='/product?action=update&idProduct=${product.idProduct}'">Edit</button>
+                        <button class="btn btn-danger btn-sm" onclick="window.location.href='/product?action=remove&idProduct=${product.idProduct}'">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for Product Details -->
+            <div class="modal fade" id="viewModal${product.idProduct}" tabindex="-1" aria-labelledby="viewModalLabel${product.idProduct}" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -70,9 +56,10 @@
                 </div>
             </div>
         </c:forEach>
-        </tbody>
-    </table>
+    </div>
+    <!-- End of Card Grid -->
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
