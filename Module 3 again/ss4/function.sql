@@ -68,32 +68,32 @@ insert into borrows (id, id_student, id_book, borrow_date, return_date) values
 (8, 3, 3, '2022-12-08', '2022-12-14'),
 (9, 1, 2, '2022-12-06', '2022-12-30');
 
-
+-- các sách mượn nhiều nhất 
 select b.title, count(br.id_book) as borrow_count
 from borrows as br
 join books as b on br.id_book = b.id_book
 group by br.id_book
 order by borrow_count desc;
 
+-- sách chưa được mượn
 select b.title, count(br.id_book) as borrow_count
 from books as b
 left join borrows as br on b.id_book = br.id_book
 group by b.id_book
 having borrow_count = 0;
 
+-- học viên từng mượn sách sắp xếp lớn nhỏ 
 select s.name_student, count(br.id_book) as borrow_count
 from students as s
 join borrows as br on s.id_student = br.id_student
 group by s.id_student, s.name_student
 order by borrow_count desc;
 
-with borrow_counts as (
-    select s.id_student, s.name_student, count(br.id_book) as borrow_count
-    from students as s
-    join borrows as br on s.id_student = br.id_student
-    group by s.id_student, s.name_student
-)
-select *
-from borrow_counts
-where borrow_count = (select max(borrow_count) from borrow_counts);
+-- các học viên mượn sách nhiều nhất 
+select s.id_student,s.name_student,count(br.id_book) as borrow_count
+from students s
+left join borrows br on s.id_student = br.id_student
+group by s.id_student
+order by borrow_count desc
+limit 4;
 
