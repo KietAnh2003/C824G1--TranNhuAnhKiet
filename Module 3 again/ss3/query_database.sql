@@ -25,12 +25,11 @@ foreign key (id_author) references authors(id_author),
 foreign key (id_category) references category(id_category)
 );
 create table borrows (
-id int,
+id int auto_increment primary key,
 id_student int,
 id_book int,
 borrow_date date,
 return_date date,
-primary key (id_student,id_book),
 foreign key (id_student) references students(id_student),
 foreign key (id_book) references books(id_book)
 );
@@ -58,12 +57,16 @@ INSERT INTO books (id_book, title, page_size, id_author, id_category) VALUES
 (3, 'Sử', 56, 3, 2),
 (4, 'Địa', 76, 4, 2),
 (5, 'Hoá', 32, 5, 1);
-INSERT INTO borrows (id,id_student, id_book, borrow_date, return_date) VALUES
-(1, 1,1, '2022-12-12', '2022-12-13'),
-(2, 2,2, '2022-12-12', '2022-12-15'),
-(3, 3,3, '2022-12-12', '2022-12-15'),
-(4, 4,4, '2022-12-12', '2022-12-12'),
-(5, 1,5, '2022-12-13', '2022-12-15'); 
+INSERT INTO borrows (id, id_student, id_book, borrow_date, return_date) VALUES
+(1, 1, 1, '2022-12-12', '2022-12-13'),
+(2, 2, 2, '2022-12-12', '2022-12-15'),
+(3, 3, 3, '2022-12-12', '2022-12-15'),
+(4, 4, 4, '2022-12-12', '2022-12-12'),
+(5, 1, 5, '2022-12-13', '2022-12-15'),
+(6, 1, 5, '2022-12-14', '2022-12-14'),
+(7, 3, 4, '2022-12-15', '2022-12-29'),
+(8, 3, 3, '2022-12-08', '2022-12-14'),
+(9, 1, 2, '2022-12-06', '2022-12-30');
 
 select title, name_author, name_category from books as b
 join authors as a on b.id_author = a.id_author
@@ -79,7 +82,3 @@ join books as bo on b.id_book = bo.id_book
 group by b.id_book, bo.title
 order by borrow_count desc
 limit 2;
-
-
-
-
