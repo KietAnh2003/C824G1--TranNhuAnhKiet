@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      background: darkred;
+      text-align: center;
+      font-size: 28px;
+      margin: 0;
+      padding: 15px;
+      text-shadow: 1px 1px 0px white, -1px 1px 0px white, 1px -1px 0px white, -2px -1px 0px white;
+    }
+    ul{
+      margin: 30px
+    }
+    li {
+      padding: 10px;
+      text-shadow: 1px 1px 0px black,
+                  -1px 1px 0px black,
+                   1px -1px 0px black,
+                  -2px -1px 0px black;
+    }
+
+    .header-section {
+      text-align: center;
+      background: lightgray;
+      position: relative;
+    }
+
+    .header-section img {
+      width: 100%;
+      height: 85px;
+      object-fit: cover;
+    }
+
+    .header-section ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-shadow: 0 10px 20px 10px rgba(20, 0, 0, 1);
+    }
+
+    .header-section li {
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .header-section li:hover {
+      text-decoration: underline;
+    }
+
+    .image-gallery {
+      width: 80%;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer {
+      background-color: rgba(40, 8, 8, 0.99);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      border-top: 2px solid #CDCDCD;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+<h1>MY PICTURE</h1>
+
+<div class="header-section">
+  <img src="jujutsu1.jpg" alt="Sample Image">
+  <ul>
+    <li>All</li>
+    <li>Web App</li>
+    <li>UI/UX</li>
+    <li>Graphics Design</li>
+    <li>Mobile App</li>
+    <li>Branding</li>
+    <li>Marketing</li>
+  </ul>
+</div>
+
+<div class="image-gallery">
+  <img src="jujutsu.jpg" alt="Portfolio Item 1">
+  <img src="jujutsu.jpg" alt="Portfolio Item 2">
+  <img src="jujutsu.jpg" alt="Portfolio Item 3">
+  <img src="jujutsu.jpg" alt="Portfolio Item 4">
+  <img src="jujutsu.jpg" alt="Portfolio Item 5">
+  <img src="jujutsu.jpg" alt="Portfolio Item 6">
+  <img src="jujutsu.jpg" alt="Portfolio Item 7">
+  <img src="jujutsu.jpg" alt="Portfolio Item 8">
+  <img src="jujutsu.jpg" alt="Portfolio Item 9">
+</div>
+
+<footer class="footer">
+  <p>Địa chỉ: 294 CODEGYM</p>
+  <p>Số điện thoại: 123456</p>
+  <p>Email: 123@mail.com</p>
+</footer>
+</body>
+</html>
