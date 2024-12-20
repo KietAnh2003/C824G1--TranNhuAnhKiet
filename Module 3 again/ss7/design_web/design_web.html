@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web</title>
+    <style>
+        body {
+            background: lightgrey;
+            margin: 0px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        div {
+            padding: 20px;
+        }
+
+        h1 {
+            background: darkgray;
+            margin: 0px;
+            text-align: center;
+            padding: 10px;
+            text-shadow: 1px 1px 0px white, -1px 1px 0px white, 1px -1px 0px white, -2px -1px 0px white;
+        }
+
+        .title {
+            text-align: center;
+            position: relative;
+        }
+
+        .title ul {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            display: inline-flex;
+            gap: 20px;
+            margin: 20px;
+            padding: 10px;
+            list-style: none;
+            white-space: nowrap;
+        }
+
+        .title li {
+            font-size: 19px;
+            color: black;
+            cursor: pointer;
+        }
+
+        .title li:hover {
+            text-decoration: underline;
+        }
+
+        .image {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 30%;
+            margin: 10px 1.5%;
+            float: left;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+<h1>MY PORTFOLIO</h1>
+
+<div class="title">
+    <ul>
+        <li>All</li>
+        <li>Web App</li>
+        <li>UI/UX</li>
+        <li>Graphics Design</li>
+        <li>Mobile App</li>
+        <li>Branding</li>
+        <li>Marketing</li>
+    </ul>
+</div>
+
+<div class="image">
+    <img src="pikachu.jpg" alt="Portfolio Item 1">
+    <img src="pikachu.jpg" alt="Portfolio Item 2">
+    <img src="pikachu.jpg" alt="Portfolio Item 3">
+    <img src="pikachu.jpg" alt="Portfolio Item 4">
+    <img src="pikachu.jpg" alt="Portfolio Item 5">
+    <img src="pikachu.jpg" alt="Portfolio Item 6">
+    <img src="pikachu.jpg" alt="Portfolio Item 7">
+    <img src="pikachu.jpg" alt="Portfolio Item 8">
+    <img src="pikachu.jpg" alt="Portfolio Item 9">
+</div>
+
+</body>
+</html>
