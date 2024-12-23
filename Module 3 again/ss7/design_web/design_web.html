@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web</title>
     <style>
         body {
             background: lightgrey;
-            margin: 0px;
+            margin: 0;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
@@ -19,24 +20,24 @@
 
         h1 {
             background: darkgray;
-            margin: 0px;
+            margin: 0;
             text-align: center;
             padding: 10px;
-            text-shadow: 1px 1px 0px white, -1px 1px 0px white, 1px -1px 0px white, -2px -1px 0px white;
+            text-shadow: 1px 1px 0 white, -1px 1px 0 white, 1px -1px 0 white, -2px -1px 0 white;
         }
 
         .title {
             text-align: center;
             position: relative;
+            padding: 20px 0;
         }
 
         .title ul {
-            position: absolute;
-            transform: translate(-50%, -50%);
-            display: inline-flex;
+            display: flex;
+            justify-content: center;
             gap: 20px;
-            margin: 20px;
-            padding: 10px;
+            margin: 0;
+            padding: 0;
             list-style: none;
             white-space: nowrap;
         }
@@ -55,6 +56,8 @@
             width: 80%;
             margin: 20px auto;
             overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .image img {
@@ -62,6 +65,45 @@
             margin: 10px 1.5%;
             float: left;
             border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .title ul {
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .image img {
+                width: 45%;
+                margin: 10px 5px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 18px;
+            }
+
+            .title ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                white-space: normal;
+            }
+
+            .title li {
+                font-size: 14px;
+            }
+
+            .image img {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .image {
+                justify-content: center;
+            }
         }
     </style>
 </head>
