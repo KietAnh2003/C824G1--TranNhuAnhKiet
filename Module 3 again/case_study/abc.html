@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underline Effect from Center</title>
+    <style>
+        .underline {
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            color: #333;
+            text-decoration: none; /* Loại bỏ gạch dưới mặc định */
+        }
+
+        .underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; /* Gạch dưới cách chữ 2px */
+            left: 50%; /* Điểm giữa của phần tử */
+            width: 100%;
+            height: 2px;
+            background-color: #007bff; /* Màu của gạch dưới */
+            transform: translateX(-50%) scaleX(0); /* Dịch tâm sang giữa, thu nhỏ gạch dưới */
+            transform-origin: center; /* Mở rộng từ giữa */
+            transition: transform 0.4s ease; /* Chuyển động mượt mà */
+        }
+
+        .underline:hover::after {
+            transform: translateX(-50%) scaleX(1); /* Mở rộng gạch dưới từ giữa */
+        }
+    </style>
 </head>
 <body>
-$END$
+<p class="underline">Hover vào đây để thấy hiệu ứng gạch dưới từ giữa.</p>
 </body>
 </html>
