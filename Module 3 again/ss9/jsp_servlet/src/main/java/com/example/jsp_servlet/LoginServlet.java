@@ -19,10 +19,10 @@ public class LoginServlet extends HttpServlet {
 
         if ("admin".equals(username) && "123abc".equals(password)) {
             String currentTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-            request.setAttribute("message", username + " đăng nhập thành công vào lúc " + currentTime);
+            request.setAttribute("message", username + " đăng nhập thành công vào lúc: " + currentTime);
             request.getRequestDispatcher("success.jsp").forward(request, response);
         } else {
-            request.setAttribute("error", "Tên đăng nhập hoặc mật khẩu không đúng.");
+            request.setAttribute("error", "Tên đăng nhập hoặc mật khẩu sai.");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }

@@ -38,6 +38,14 @@
         .carousel-item {
             transition: transform 0.7s ease-in-out; /*chuyển động ảnh trong vòng 0.7 giây*/
         }
+        @media screen and (max-width: 992px) {
+            .navbar-nav {
+                text-align: center;
+            }
+            .navbar-toggler {
+                border: none;
+            }
+        }
 
     </style>
 </head>
@@ -45,14 +53,28 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">NeTa Shop</a>
-        <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
-            <a class="nav-link" href="#">Giới thiệu</a>
-            <a class="nav-link" href="#">Dịch vụ</a>
-            <a class="nav-link" href="#">Liên hệ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dịch vụ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
+
 <div class="container my-4">
     <div class="row">
         <aside class="col-md-3">

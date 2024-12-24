@@ -5,15 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aea279c1-fe8f-4a90-8cf1-5370e6ae46e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jsp_servlet/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss3/query_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss3/query_database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss6/bai_tap_css/bai_tap_css.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss6/bai_tap_css/bai_tap_css.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss6/bai_tap_css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss6/bai_tap_css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss7/ss7/design_web/design_web.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/ss7/design_web/design_web.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss7/ss7/test_thiet_ke_bo_cuc/design_web.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7/ss7/test_thiet_ke_bo_cuc/design_web.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss8/bootstrap/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss8/bootstrap/bootstrap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/css/css.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/java/com/example/case_study_module_3/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/img/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/img/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/img/ga_u_muoi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/img/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/img/nam_nuong_ong_tre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/view/banner.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/view/feedback_form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/view/food_menu.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/view/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/view/header.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/view/sidebar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_module_3/src/main/webapp/view/utilities.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo1/src/main/webapp/toilaai.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/abc.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/abc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/case_study_module_3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/database/case_study_module_3.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/css.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/landing page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/landing page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss8/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss8/bootstrap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jsp_servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/jsp_servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/success.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../module 3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module 3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../module 3/java-web-currency-converter/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module 3/java-web-currency-converter/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../module 3/ss10/thuc_hanh/thuchanh1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module 3/ss10/thuc_hanh/thuchanh1/.idea/gradle.xml" afterDir="false" />
@@ -28,6 +48,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jsp_servlet" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,18 +89,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CodeGym/C824G1--TranNhuAnhKiet/Module 3 again/ss9/jsp_servlet&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.972" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.972" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -76,6 +114,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="1e6dd862-623e-4d8d-b91c-8ac73c31a8f1" />
+        <option name="HTTP_PORT" value="8081" />
+        <option name="JNDI_PORT" value="1091" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -162,6 +202,8 @@
       <option name="presentableId" value="Default" />
       <updated>1734579051363</updated>
       <workItem from="1734579052426" duration="2389000" />
+      <workItem from="1735015844415" duration="2001000" />
+      <workItem from="1735025597074" duration="296000" />
     </task>
     <servers />
   </component>
