@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    transition: all 0.3s ease-in-out; /* Hiệu ứng khi mở/đóng */
 }
 .sidebar .logo {
     border-radius: 50px;
@@ -43,6 +43,7 @@ body {
     text-align: left; /* Căn giữa chữ trong từng hàng */
     width: max-content; /* Đảm bảo kích thước phù hợp với nội dung chữ */
     margin-right: 20%; /* nằm bên trái */
+    transition: color 0.3s;
 }
 .sidebar .nav-link::after {
     content: "";
@@ -86,6 +87,22 @@ body {
 }
 .sidebar .contact-info .social-icons a:hover {
     color: #ffd9a6;
+}
+.collapse:not(.show) + .sidebar {
+    left: -250px;
+}
+/* Nút Hamburger */
+/* Nút Hamburger */
+.navbar-toggler {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1060; /* Đảm bảo nút luôn ở trên cùng */
+    background: #007bff;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 5px 10px;
 }
 
 
@@ -296,7 +313,48 @@ footer {
     text-align: center;
     padding: 20px;
 }
+@media (max-width: 992px) {
+    /* Sidebar điều chỉnh trên màn hình vừa */
+    .sidebar {
+        width: 200px;
+        padding: 15px;
+    }
+    .sidebar .logo {
+        font-size: 1.4rem;
+    }
+    .sidebar .nav-link {
+        font-size: 1rem;
+        margin-right: 15%;
+    }
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
 
+@media (max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        width: 100%; /* Chiếm toàn bộ chiều ngang màn hình */
+        left: -100%; /* Ẩn bên trái */
+        z-index: 1050;
+    }
+
+    .sidebar.show {
+        left: 0; /* Hiển thị lại khi có lớp show */
+    }
+
+    .content {
+        margin-left: 0; /* Nội dung chính chiếm toàn màn hình */
+    }
+}
+
+@media (max-width: 576px) {
+    .food-menu .col-md-4 {
+        flex: 0 0 100%; /* Một card trên một hàng ở màn hình nhỏ */
+        max-width: 100%;
+    }
+}
 @media (max-width: 1200px) {
     .main-content {
         margin-left: 200px; /* Giảm kích thước sidebar trên màn hình lớn */
@@ -372,9 +430,13 @@ footer {
         max-width: 100%;
     }
     .sidebar {
-       display: none;
+        display: none;
     }
     .main-content {
         margin-left: 0;
     }
 }
+
+
+
+
