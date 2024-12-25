@@ -18,7 +18,6 @@ public class StudentRepository {
         students.add(new Student("HV10007","Kiệt","Nam",20));
     }
 
-
     public List<Student> getAll() {
         return students;
     }
