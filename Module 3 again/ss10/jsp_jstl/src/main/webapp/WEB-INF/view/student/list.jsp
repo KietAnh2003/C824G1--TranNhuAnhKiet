@@ -11,24 +11,24 @@
         .nav.text-light .nav-link {
             color: #f8f9fa !important;
         }
-
     </style>
 </head>
 <body>
-<ul class="nav bg-dark text-light p-2 ">
-    <li class="nav-item ">
-        <a class="nav-link " href="#">Codegym</a>
+<ul class="nav bg-dark text-light p-2 d-flex align-items-center">
+    <li class="nav-item">
+        <a class="nav-link active fw-bold fs-2" href="#">Codegym</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Học viên</a>
+        <a class="nav-link " href="#">Học viên</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Điểm</a>
+        <a class="nav-link " href="#">Điểm</a>
     </li>
     <li class="nav-item">
         <a class="nav-link " href="#">Xếp hạng</a>
     </li>
 </ul>
+
 <table class="table table-dark table-striped-columns m-4 custom-w-80">
     <thead>
     <tr>
@@ -41,7 +41,6 @@
     </tr>
     </thead>
     <tbody>
-    <%-- Kiểm tra nếu danh sách không rỗng --%>
     <c:if test="${not empty students}">
         <c:forEach items="${students}" var="student">
             <tr>
