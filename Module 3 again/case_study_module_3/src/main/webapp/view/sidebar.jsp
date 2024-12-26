@@ -1,11 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-    <!-- Nút mở/đóng sidebar -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar"
-            aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
-        &#9776;
-    </button>
-
     <!-- Sidebar -->
     <div class="collapse d-md-block sidebar" id="sidebar">
         <div>
