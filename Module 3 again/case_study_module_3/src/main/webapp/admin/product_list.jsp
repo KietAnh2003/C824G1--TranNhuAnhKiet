@@ -30,7 +30,6 @@
         </a>
     </div>
 </div>
-
 <!-- Main Content -->
 <div class="main-content">
     <div class="banner">
@@ -99,7 +98,9 @@
         </div>
     </div>
 
-
+    <div class="cart-icon">
+        <i class="bi bi-cart"></i>
+    </div>
     <jsp:include page="/partials/footer.jsp" />
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
