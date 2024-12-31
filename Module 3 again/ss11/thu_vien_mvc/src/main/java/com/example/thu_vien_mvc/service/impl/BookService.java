@@ -11,7 +11,8 @@ public class BookService implements IBookService {
 
     @Override
     public List<Book> getAll() {
-        return bookRepository.getAll();
+        List<Book> books = bookRepository.getAll();
+        return books;
     }
 
     @Override
@@ -20,8 +21,9 @@ public class BookService implements IBookService {
     }
 
     @Override
-    public void delete(Integer id) {
+    public boolean delete(Integer id) {
         bookRepository.delete(id);
+        return false;
     }
 
     @Override

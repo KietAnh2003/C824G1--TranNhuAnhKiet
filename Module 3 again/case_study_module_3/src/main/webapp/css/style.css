@@ -8,13 +8,13 @@ body {
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: white; /* Set background to white */
+    background-color: white;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     padding: 20px;
-    color: #666; /* Default text color for items */
+    color: #666;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -105,7 +105,6 @@ body {
     padding: 5px 10px;
 }
 
-
 .main-content {
     margin-left: 250px;
     width: calc(100% - 250px);
@@ -115,9 +114,10 @@ body {
     background-color: #f9f9f9;
 }
 /*banner đầu trang*/
+
 .banner {
-    background: url('../img/banner.jpg') no-repeat center center / cover;
-    height: 400px;
+    background: url('../img/banner2.jpg') no-repeat center center / cover;
+    height: 200px;
     position: relative;
     display: flex;
     align-items: center;
@@ -137,7 +137,7 @@ body {
     position: relative;
     z-index: 1;
     font-size: 3rem;
-    color: #fff;
+    color: #ff9e63;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
@@ -313,6 +313,31 @@ footer {
     text-align: center;
     padding: 20px;
 }
+.cart-icon {
+    position: fixed; /* Cố định vị trí so với cửa sổ trình duyệt */
+    top: 20px;       /* Khoảng cách từ cạnh trên của cửa sổ */
+    right: 20px;     /* Khoảng cách từ cạnh phải của cửa sổ */
+    width: 50px;     /* Chiều rộng của phần tử chứa */
+    height: 50px;    /* Chiều cao của phần tử chứa */
+    display: flex;   /* Sử dụng Flexbox để căn giữa nội dung */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;     /* Căn giữa theo chiều dọc */
+    font-size: 24px; /* Kích thước biểu tượng */
+    cursor: pointer; /* Thay đổi con trỏ khi di chuột qua biểu tượng */
+    background-color: rgba(0, 0, 0, 0.5); /* Nền đen mờ */
+    border-radius: 50%; /* Bo tròn góc để tạo hình tròn */
+    transition: background-color 0.3s; /* Thêm hiệu ứng chuyển màu nền khi hover */
+}
+
+.cart-icon i {
+    color: white; /* Màu biểu tượng trắng */
+    transition: color 0.3s; /* Thêm hiệu ứng chuyển màu biểu tượng khi hover */
+}
+
+.cart-icon:hover {
+    background-color: #a62c06;
+}
+
 @media (max-width: 992px) {
     /* Sidebar điều chỉnh trên màn hình vừa */
     .sidebar {

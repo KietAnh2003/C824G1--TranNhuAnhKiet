@@ -4,11 +4,10 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/jsp_jstl" />
-        <option name="gradleJvm" value="corretto-17" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/thu_vien_mvc" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/jsp_jstl" />
+            <option value="$PROJECT_DIR$/thu_vien_mvc" />
           </set>
         </option>
       </GradleProjectSettings>

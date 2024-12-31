@@ -39,7 +39,7 @@ public class BookController extends HttpServlet {
                     Integer idToDelete = Integer.parseInt(req.getParameter("id"));
                     Book bookToDelete = bookService.getBookById(idToDelete);
                     if (bookToDelete != null) {
-                        bookService.delete(idToDelete);
+                        bookService.delete(idToDelete);  // Gọi phương thức delete trong service
                         resp.sendRedirect("book?message=delete_success");
                     } else {
                         resp.sendRedirect("book?message=notfound");

@@ -1,15 +1,15 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
     <!-- Sidebar -->
     <div class="collapse d-md-block sidebar" id="sidebar">
         <div>
             <!-- Logo -->
             <div class="logo">
-                <img src="img/logo.jpg" alt="logo" class="img-logo">
+                <img src="${pageContext.request.contextPath}/img/logo.jpg" alt="logo" class="img-logo">
             </div>
             <!-- Navigation -->
             <nav>
                 <a class="nav-link" href="#">TRANG CHỦ</a>
-                <a class="nav-link" href="#">THỰC ĐƠN</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/admin/product_list.jsp">THỰC ĐƠN</a>
                 <a class="nav-link" href="#">KHUYẾN MÃI</a>
                 <a class="nav-link" href="#">LIÊN HỆ</a>
                 <a class="nav-link" href="#">GIỚI THIỆU</a>

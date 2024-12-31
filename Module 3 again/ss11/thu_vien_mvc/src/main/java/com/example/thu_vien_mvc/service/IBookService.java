@@ -13,7 +13,7 @@ public interface IBookService {
     Book getBookById(int id);
 
     void update(Book updateBook);
-    void delete(Integer id);
+    boolean delete(Integer id);
 
     List<Book> searchBookByTitle(String query);
 }
