@@ -16,19 +16,12 @@ public class BookRepository {
         PreparedStatement statement = null;
         List<Book> books = new ArrayList<>();
         try {
-            //sử dụng JOIN để lấy dữ liệu từ 3 bảng book author category
-            String sql = "SELECT b.id_book, b.title, b.page_size, a.name_author AS author, c.name_category AS category " +
-                    "FROM books b " +
-                    "JOIN authors a ON b.id_author = a.id_author " +
-                    "JOIN category c ON b.id_category = c.id_category";
-
-            statement = BaseRepository.getConnection().prepareStatement(sql);
+            statement = BaseRepository.getConnection().prepareStatement("SELECT id, title, pageSize, author,category  FROM books  ");
             ResultSet resultSet = statement.executeQuery();
-
             while (resultSet.next()) {
-                int id = resultSet.getInt("id_book");
+                int id = resultSet.getInt("id");
                 String title = resultSet.getString("title");
-                int pageSize = resultSet.getInt("page_size");
+                int pageSize = resultSet.getInt("pageSize");
                 String author = resultSet.getString("author");
                 String category = resultSet.getString("category");
 

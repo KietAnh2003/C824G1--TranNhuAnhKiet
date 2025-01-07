@@ -2,21 +2,21 @@ create database library;
 use library;
 
 create table students (
-id_student int primary key,
+id_student int primary key AUTO_INCREMENT,
 name_student varchar(50),
 birthday date,
 class_name varchar(50)
 );
 create table authors (
-id_author int primary key,
+id_author int primary key AUTO_INCREMENT,
 name_author varchar(50)
 );
 create table category (
-id_category int primary key,
+id_category int primary key AUTO_INCREMENT,
 name_category varchar(50)
 );
 create table books (
-id_book int primary key,
+id_book int primary key AUTO_INCREMENT,
 title varchar(50),
 page_size int, 
 id_author int,
@@ -67,6 +67,7 @@ INSERT INTO borrows (id, id_student, id_book, borrow_date, return_date) VALUES
 (7, 3, 4, '2022-12-15', '2022-12-29'),
 (8, 3, 3, '2022-12-08', '2022-12-14'),
 (9, 1, 2, '2022-12-06', '2022-12-30');
+
 
 select title, name_author, name_category from books as b
 join authors as a on b.id_author = a.id_author

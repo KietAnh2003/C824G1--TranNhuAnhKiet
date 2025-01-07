@@ -16,6 +16,18 @@ import java.util.List;
 public class BookController extends HttpServlet {
     private static final IBookService bookService = new BookService();
 
+//    public class BookController extends HttpServlet {
+//        private static final IBookService bookService = new BookService();
+//
+//        @Override
+//        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//            req.setCharacterEncoding("UTF-8");
+//            List<Book> books = bookService.getAll();
+//            req.setAttribute("books", books);
+//            req.getRequestDispatcher("/WEB-INF/view/list.jsp").forward(req, resp);
+//        }}
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
