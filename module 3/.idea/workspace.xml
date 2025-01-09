@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64e04011-f01e-4a5e-9424-907cba48aefc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 3 again/ss3/query_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 3 again/ss3/query_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 3 again/ss6/bai_tap_css/bai_tap_css.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 3 again/ss6/bai_tap_css/bai_tap_css.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 3 again/ss6/bai_tap_css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 3 again/ss6/bai_tap_css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 3 again/ss7/ss7/design_web/design_web.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 3 again/ss7/ss7/design_web/design_web.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 3 again/ss7/ss7/test_thiet_ke_bo_cuc/design_web.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 3 again/ss7/ss7/test_thiet_ke_bo_cuc/design_web.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module 3 again/ss8/bootstrap/bootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module 3 again/ss8/bootstrap/bootstrap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-web-currency-converter/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java-web-currency-converter/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10/thuc_hanh/thuchanh1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ss10/thuc_hanh/thuchanh1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss2/bai1ss2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ss2/bai1ss2.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +49,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/CodeGym/C824G1--TranNhuAnhKiet/module 3",
+    "last_opened_file_path": "D:/CodeGym/C824G1--TranNhuAnhKiet/Module 3 again/ss8",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +87,7 @@
       <workItem from="1732670164635" duration="13719000" />
       <workItem from="1732755905183" duration="5366000" />
       <workItem from="1732776695370" duration="180000" />
+      <workItem from="1734578230784" duration="44000" />
     </task>
     <servers />
   </component>
