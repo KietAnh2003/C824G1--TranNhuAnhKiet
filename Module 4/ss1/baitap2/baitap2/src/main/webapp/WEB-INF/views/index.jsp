@@ -9,7 +9,7 @@
 <form action="/translate" method="get" style="width: 350px; margin: 20px auto">
     <h1>Từ điển Anh - Việt</h1>
     <div class="mb-3">
-        <label for="word" class="form-label">Nhập từ cần dịch: (vd: hello, word, spring,..)</label>
+        <label for="word" class="form-label">Nhập từ cần dịch: (hello, red, book,..)</label>
         <input type="text" class="form-control" id="word" name="word" required>
     </div>
     <button type="submit" class="btn btn-primary">Tra từ</button>
